@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════
+   TAILWIND v4 THEME — Headspace-inspired warm palette
+   Dr. Pradeep Kumar Neurology
+═══════════════════════════════════════════════════════════ */
+@theme {
+  /* ── Backgrounds (warm, never cold clinical white) ── */
+  --color-bg:          #FAF8F5;
+  --color-bg-peach:    #FFF4EE;
+  --color-bg-lavender: #F3F0FF;
+  --color-bg-sage:     #EDFAF4;
+  --color-bg-sky:      #EEF6FF;
+  --color-bg-dark:     #1C1510;
+  --color-white:       #FFFFFF;
+
+  /* ── Brand ── */
+  --color-coral:       #E8714A;
+  --color-coral-hover: #D45E38;
+  --color-coral-light: #FEF0EB;
+  --color-navy:        #1E3A5F;
+  --color-teal:        #16907A;
+  --color-teal-light:  #E4FAF5;
+  --color-gold:        #F59E0B;
+  --color-purple:      #6D28D9;
+  --color-sky-blue:    #0EA5E9;
+
+  /* ── Text ── */
+  --color-ink:         #1C1917;
+  --color-ink-mid:     #57534E;
+  --color-ink-soft:    #A8A29E;
+
+  /* ── Borders ── */
+  --color-border:      #E7E5E4;
+  --color-border-warm: #F0EBE3;
+
+  /* ── Fonts ── */
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans:  "DM Sans", system-ui, -apple-system, sans-serif;
+
+  /* ── Radii (very rounded — Headspace DNA) ── */
+  --radius-sm:   12px;
+  --radius-md:   20px;
+  --radius-lg:   28px;
+  --radius-xl:   40px;
+  --radius-pill: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 2px 16px rgba(28,25,23,0.06);
+  --shadow-md: 0 8px 40px rgba(28,25,23,0.10);
+  --shadow-lg: 0 20px 60px rgba(28,25,23,0.14);
+  --shadow-coral: 0 8px 28px rgba(232,113,74,0.35);
+
+  /* ── Spacing ── */
+  --section-y: 112px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BASE RESET
+═══════════════════════════════════════════════════════════ */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    line-height: 1.1;
+    color: var(--color-ink);
+    letter-spacing: -0.015em;
+  }
+
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  /* Focus ring */
+  :focus-visible {
+    outline: 2px solid var(--color-coral);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Selection */
+  ::selection {
+    background: var(--color-coral-light);
+    color: var(--color-coral-hover);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   UTILITIES
+═══════════════════════════════════════════════════════════ */
+@layer utilities {
+  .font-serif  { font-family: var(--font-serif); }
+  .font-sans   { font-family: var(--font-sans); }
+
+  /* Section rhythm */
+  .section-y   { padding-top: var(--section-y); padding-bottom: var(--section-y); }
+  .section-y-sm { padding-top: calc(var(--section-y) * 0.6); padding-bottom: calc(var(--section-y) * 0.6); }
+
+  /* Reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-left  { transform: translateX(-28px); }
+  .reveal-right { transform: translateX(28px); }
+  .reveal-left.in, .reveal-right.in { transform: translateX(0); }
+
+  /* Breathing pulse */
+  .breathe {
+    animation: breathe 3s ease-in-out infinite;
+  }
+
+  /* Gentle float */
+  .float-anim {
+    animation: floatY 6s ease-in-out infinite;
+  }
+  .float-anim-2 { animation-delay: -2s; }
+  .float-anim-3 { animation-delay: -4s; }
+
+  /* Morphing blob */
+  .blob-morph {
+    animation: blobMorph 9s ease-in-out infinite;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   KEYFRAMES
+═══════════════════════════════════════════════════════════ */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.5); opacity: 0.6; }
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-10px) rotate(1.5deg); }
+  66%       { transform: translateY(-5px) rotate(-1deg); }
+}
+
+@keyframes blobMorph {
+  0%, 100% { border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%; }
+  33%       { border-radius: 45% 55% 40% 60% / 60% 40% 55% 45%; }
+  66%       { border-radius: 55% 45% 60% 40% / 40% 55% 45% 60%; }
+}
+
+@keyframes driftOrb {
+  from { transform: translate(0,0) scale(1); }
+  to   { transform: translate(40px,30px) scale(1.15); }
+}
+
+@keyframes gentleSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SHADCN VARIABLE OVERRIDES (CSS vars used by shadcn)
+═══════════════════════════════════════════════════════════ */
+@layer base {
+  :root {
+    --background: 40 33% 98%;        /* #FAF8F5 */
+    --foreground: 20 9% 11%;         /* #1C1917 */
+    --card: 0 0% 100%;
+    --card-foreground: 20 9% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 9% 11%;
+    --primary: 18 78% 60%;           /* coral #E8714A */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 10% 96%;
+    --secondary-foreground: 20 9% 11%;
+    --muted: 40 10% 96%;
+    --muted-foreground: 25 6% 44%;   /* #57534E */
+    --accent: 168 71% 33%;           /* teal #16907A */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 13% 90%;            /* #E7E5E4 */
+    --input: 30 13% 90%;
+    --ring: 18 78% 60%;
+    --radius: 0.75rem;
+  }
+}
