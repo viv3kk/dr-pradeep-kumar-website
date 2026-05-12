@@ -1,3 +1,6 @@
+import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
+
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
@@ -10,36 +13,44 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { Connect } from "@/components/sections/Connect";
 import { FAQ } from "@/components/sections/FAQ";
 
-export default function Home() {
+import { buildLocaleMetadata } from "@/lib/seo";
+import { routing, type Locale } from "@/i18n/routing";
+
+/* ── Static generation for both locales ───────────────────── */
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+/* ── Per-locale metadata (canonical + hreflang) ───────────── */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildLocaleMetadata(locale, "/");
+}
+
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <Navbar />
       <main>
-        {/* 1. Hero — doctor intro + social proof + illustration */}
         <Hero />
-
-        {/* 2. Trust strip — hospital affiliations */}
         <TrustStrip />
-
-        {/* 3. About — education timeline + specialisations */}
         <About />
-
-        {/* 4. Services — 6 condition cards + procedures */}
         <Services />
-
-        {/* 5. How it works — 3-step patient journey */}
         <HowItWorks />
-
-        {/* 6. Promise — values + stats banner */}
         <Promise />
-
-        {/* 7. Testimonials — 6 patient stories */}
         <Testimonials />
-
-        {/* 8. Book / Connect — form + clinic info + map */}
         <Connect />
-
-        {/* 9. FAQ — accordion */}
         <FAQ />
       </main>
       <Footer />

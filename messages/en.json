@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "about": "About",
+    "specialties": "Specialties",
+    "allSpecialties": "All specialties",
+    "howItWorks": "How It Works",
+    "patients": "Patients",
+    "faq": "FAQ",
+    "bookVisit": "Book a visit",
+    "callDoctor": "Call Dr. Kumar",
+    "switchToHindi": "हिं",
+    "switchToEnglish": "EN"
+  },
+  "specialtiesIndex": {
+    "eyebrow": "Our specialties",
+    "title": "Care for the whole nervous system",
+    "titleEm": "with empathy.",
+    "subtitle": "Dr. Pradeep Kumar's practice covers six clinical fields of neurology — built around the questions patients and families really ask.",
+    "exploreCta": "Explore this field"
+  },
+  "page": {
+    "couldThisBeYou": "Could this be you?",
+    "whatItFeelsLike": "What it feels like",
+    "whatsHappening": "What's happening inside",
+    "redFlags": "When to come in — and when it's urgent",
+    "redFlagsLead": "Some symptoms can wait for a routine visit. Others can't. Please don't second-guess these:",
+    "howDrKumarTreats": "How Dr. Kumar treats it",
+    "forCaregivers": "For the people caring for them",
+    "drKumarsApproach": "Dr. Kumar's approach in this field",
+    "patientStory": "A patient's story",
+    "livingWell": "Living well with this condition",
+    "faqs": "Questions you might be asking",
+    "bookCta": "Talk to Dr. Kumar",
+    "bookCtaSub": "No question is too small. Same-week appointments, in person or by video.",
+    "moreTopics": "More topics in this field",
+    "hindiSummary": "हिंदी में पढ़ें",
+    "readMore": "Read more",
+    "readLess": "Read less"
+  },
+  "cta": {
+    "bookFloating": "Book a visit",
+    "callNow": "Call now",
+    "videoConsult": "Video consult"
+  },
+  "common": {
+    "verified": "Verified",
+    "fromReview": "from a verified patient review",
+    "viaApollo247": "via Apollo 247",
+    "viaHexaHealth": "via HexaHealth",
+    "loading": "Loading…"
+  }
+}

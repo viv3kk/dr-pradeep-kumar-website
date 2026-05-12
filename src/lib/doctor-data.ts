@@ -54,21 +54,92 @@ export const DOCTOR = {
     { name: "Medanta Hospital", city: "Lucknow" },
   ],
 
-  // ── Primary Clinic ──────────────────────────────────────────────────────────
+  // ── Primary Clinic (kept for backward-compat — points to Kanpur as main) ────
   clinic: {
-    name: "Apollomedics Super Speciality Hospital",
-    address: "LDA Colony, Kanpur Road",
-    city: "Lucknow",
+    name: "Paras Hospital",
+    address: "Paras Hospital Premises",
+    city: "Kanpur",
     state: "Uttar Pradesh",
-    pin: "226012",
+    pin: "208001",
     phone: "+91-7388-888-888",
-    email: "drpradeep@apollomedics.com",
+    email: "drpradeep@example.com",
     mapEmbed:
-      "https://maps.google.com/maps?q=Apollomedics+Hospital+Lucknow&output=embed",
-    timings: "Mon – Sat: 10:00 AM – 7:00 PM",
+      "https://maps.google.com/maps?q=Paras+Hospital+Kanpur&output=embed",
+    timings: "Mon, Tue, Thu, Fri",
     telehealth: true,
     emergencyAvailable: true,
   },
+
+  // ── All Practice Locations ──────────────────────────────────────────────────
+  // Dr. Kumar splits his week across 3 locations. Each card on the site reads
+  // from this list — order here = display order.
+  clinics: [
+    {
+      id: "lucknow-chandan",
+      shortName: "Lucknow — Morning",
+      name: "Lucknow Morning Clinic",
+      addressLine1: "Behind Chandan Hospital",
+      addressLine2: "Faizabad Road",
+      city: "Lucknow",
+      state: "Uttar Pradesh",
+      pin: "226010",
+      phone: "+91-7388-888-888",
+      days: ["Wed", "Sat"],
+      daysSummary: "Morning slots",
+      timings: "Morning hours · call to confirm",
+      mapSearchQuery: "Chandan Hospital Lucknow",
+      mapEmbed:
+        "https://maps.google.com/maps?q=Chandan+Hospital+Lucknow&output=embed",
+      mapsUrl: "https://www.google.com/maps/search/Chandan+Hospital+Lucknow",
+    },
+    {
+      id: "lucknow-pgi",
+      shortName: "Lucknow — Wed Evening",
+      name: "Lucknow Evening Clinic",
+      addressLine1: "Near PGI (SGPGIMS)",
+      addressLine2: "Raebareli Road",
+      city: "Lucknow",
+      state: "Uttar Pradesh",
+      pin: "226014",
+      phone: "+91-7388-888-888",
+      days: ["Wed"],
+      daysSummary: "Wednesday evening",
+      timings: "Wednesday evening · call to confirm",
+      mapSearchQuery: "SGPGIMS Lucknow",
+      mapEmbed:
+        "https://maps.google.com/maps?q=SGPGIMS+Lucknow&output=embed",
+      mapsUrl: "https://www.google.com/maps/search/SGPGIMS+Lucknow",
+    },
+    {
+      id: "kanpur-paras",
+      shortName: "Kanpur — Paras",
+      name: "Paras Hospital, Kanpur",
+      addressLine1: "Paras Hospital",
+      addressLine2: "",
+      city: "Kanpur",
+      state: "Uttar Pradesh",
+      pin: "208001",
+      phone: "+91-7388-888-888",
+      days: ["Mon", "Tue", "Thu", "Fri"],
+      daysSummary: "Mon, Tue, Thu, Fri",
+      timings: "Mon · Tue · Thu · Fri",
+      mapSearchQuery: "Paras Hospital Kanpur",
+      mapEmbed:
+        "https://maps.google.com/maps?q=Paras+Hospital+Kanpur&output=embed",
+      mapsUrl: "https://www.google.com/maps/search/Paras+Hospital+Kanpur",
+    },
+  ],
+
+  // ── Weekly schedule (derived from clinics, for the UI ribbon) ───────────────
+  weeklySchedule: [
+    { day: "Mon", location: "Kanpur" },
+    { day: "Tue", location: "Kanpur" },
+    { day: "Wed", location: "Lucknow" },
+    { day: "Thu", location: "Kanpur" },
+    { day: "Fri", location: "Kanpur" },
+    { day: "Sat", location: "Lucknow" },
+    { day: "Sun", location: "Off" },
+  ],
 
   // ── Consultation Fees ───────────────────────────────────────────────────────
   fees: {

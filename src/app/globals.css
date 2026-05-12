@@ -107,6 +107,13 @@
 @layer utilities {
   .font-serif  { font-family: var(--font-serif); }
   .font-sans   { font-family: var(--font-sans); }
+  .font-hi     { font-family: var(--font-noto-hi, "Noto Sans Devanagari", system-ui, sans-serif); }
+
+  /* When wrapping Hindi content, balance line-height for Devanagari */
+  .lang-hi {
+    font-family: var(--font-noto-hi, "Noto Sans Devanagari", system-ui, sans-serif);
+    line-height: 1.75;
+  }
 
   /* Section rhythm */
   .section-y   { padding-top: var(--section-y); padding-bottom: var(--section-y); }
