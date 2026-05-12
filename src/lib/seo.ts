@@ -27,7 +27,11 @@ export function buildLocaleMetadata(
   locale: Locale,
   pathWithoutLocale: string
 ): Pick<Metadata, "alternates" | "openGraph"> {
-  const current = localeUrl(locale, pathWithoutLocale);
+  /* Guard: fall back to "en" if an unrecognised locale slips through at runtime. */
+  const safeLocale: Locale =
+    locale in LOCALE_META ? (locale as Locale) : routing.defaultLocale;
+
+  const current = localeUrl(safeLocale, pathWithoutLocale);
 
   /* hreflang map. x-default points to English for international fallback. */
   const languages: Record<string, string> = {
@@ -38,7 +42,7 @@ export function buildLocaleMetadata(
   }
 
   const otherLocales = routing.locales
-    .filter((l) => l !== locale)
+    .filter((l) => l !== safeLocale)
     .map((l) => LOCALE_META[l].ogLocale);
 
   return {
@@ -48,7 +52,7 @@ export function buildLocaleMetadata(
     },
     openGraph: {
       url: current,
-      locale: LOCALE_META[locale].ogLocale,
+      locale: LOCALE_META[safeLocale].ogLocale,
       alternateLocale: otherLocales,
     },
   };

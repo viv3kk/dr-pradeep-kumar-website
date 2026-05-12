@@ -17,9 +17,10 @@ function FAQItem({
   const contentRef = useRef<HTMLDivElement>(null);
 
   return (
+    <div className="reveal">
     <div
       className={cn(
-        "reveal border rounded-2xl overflow-hidden transition-all duration-200",
+        "border rounded-2xl overflow-hidden transition-all duration-200",
         isOpen
           ? "border-[#E8714A] bg-[#FFF4EE] shadow-[0_4px_16px_rgba(232,113,74,0.08)]"
           : "border-[#E7E5E4] bg-white hover:border-[#E8714A]/50"
@@ -60,6 +61,7 @@ function FAQItem({
           {a}
         </p>
       </div>
+    </div>
     </div>
   );
 }

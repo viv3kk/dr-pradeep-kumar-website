@@ -2,22 +2,17 @@
 
 import { useEffect, useRef } from "react";
 
-const PROMISES = [
-  {
-    emoji: "🕐",
-    title: "Time for you",
-    body: "Dr. Kumar never rushes a consultation. Every patient gets the time and attention they deserve — questions are always welcome.",
-  },
-  {
-    emoji: "🗣️",
-    title: "Plain-language care",
-    body: "Complex neurology, explained simply — in Hindi or English. You'll always understand your diagnosis, your options, and your next steps.",
-  },
-  {
-    emoji: "🤝",
-    title: "Partnership, not prescription",
-    body: "Treatment plans are built together. Your lifestyle, preferences, and goals shape the care you receive — not just the textbook.",
-  },
+const TEAM = [
+  { emoji: "👨‍⚕️", role: "Dr. Pradeep Kumar", sub: "Senior Neurologist" },
+  { emoji: "🩺", role: "Junior Doctor", sub: "Neurology Support" },
+  { emoji: "🏃", role: "Physiotherapist", sub: "Neuro-Rehabilitation" },
+  { emoji: "💊", role: "Pharmacist", sub: "Medication Management" },
+  { emoji: "🔬", role: "Lab Technician", sub: "Diagnostics" },
+  { emoji: "🧠", role: "Psychologist", sub: "Mental Health Support" },
+  { emoji: "📡", role: "Neurotech Specialist", sub: "EEG & NCS" },
+  { emoji: "💬", role: "Counselor", sub: "Patient Guidance" },
+  { emoji: "🤍", role: "Nursing Team", sub: "Bedside Care" },
+  { emoji: "🏠", role: "Home Care", sub: "Care at Your Doorstep" },
 ];
 
 export function Promise() {
@@ -29,12 +24,12 @@ export function Promise() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.querySelectorAll(".reveal").forEach((el, i) => {
-              setTimeout(() => el.classList.add("in"), i * 100);
+              setTimeout(() => el.classList.add("in"), i * 80);
             });
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
@@ -44,9 +39,9 @@ export function Promise() {
     <section
       ref={sectionRef}
       className="py-24 md:py-32 bg-gradient-to-br from-[#E8714A] to-[#D45E38] overflow-hidden relative"
-      aria-label="Our promise to patients"
+      aria-label="Our dedicated team"
     >
-      {/* Background orb */}
+      {/* Background orbs */}
       <div
         aria-hidden="true"
         className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full
@@ -60,40 +55,57 @@ export function Promise() {
 
       <div className="max-w-[1120px] mx-auto px-6 md:px-10 relative z-10">
 
+        {/* Header */}
         <div className="reveal text-center mb-14">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest
                            text-white/70 mb-4">
-            Our Promise
+            Our Dedicated Team
           </span>
           <h2
             className="font-serif text-[clamp(32px,5vw,52px)] font-bold text-white
                        leading-tight"
             style={{ fontFamily: "var(--font-fraunces, 'Fraunces', serif)" }}
           >
-            You deserve care that<br/>
-            <em style={{ fontStyle: "italic" }}>actually listens.</em>
+            A full team, caring<br/>
+            <em style={{ fontStyle: "italic" }}>for you.</em>
           </h2>
+          <p className="mt-5 text-white/80 text-[17px] max-w-[480px] mx-auto leading-relaxed">
+            Dr. Kumar is backed by a multidisciplinary team committed to whole-person neurological care.
+          </p>
+
+          {/* Tagline badges */}
+          <div className="flex items-center justify-center gap-3 mt-6 flex-wrap">
+            <span className="inline-flex items-center gap-2 bg-white/20 border border-white/30
+                             text-white text-sm font-semibold px-4 py-2 rounded-full backdrop-blur-sm">
+              <span aria-hidden="true">🏠</span> Care at your doorstep
+            </span>
+            <span className="inline-flex items-center gap-2 bg-white/20 border border-white/30
+                             text-white text-sm font-semibold px-4 py-2 rounded-full backdrop-blur-sm">
+              <span aria-hidden="true">🕐</span> 24×7 Support
+            </span>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {PROMISES.map((promise, i) => (
+        {/* Team grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          {TEAM.map((member, i) => (
             <div
               key={i}
-              className="reveal bg-white/15 backdrop-blur-sm rounded-3xl p-8
-                         border border-white/20 hover:bg-white/20 transition-colors"
+              className="reveal bg-white/15 backdrop-blur-sm rounded-2xl p-5
+                         border border-white/20 hover:bg-white/22 transition-colors
+                         flex flex-col items-center text-center gap-3"
             >
-              <span className="text-5xl block mb-5" role="img" aria-label={promise.title}>
-                {promise.emoji}
+              <span className="text-4xl" role="img" aria-label={member.role}>
+                {member.emoji}
               </span>
-              <h3
-                className="font-serif text-xl font-bold text-white mb-3"
-                style={{ fontFamily: "var(--font-fraunces, 'Fraunces', serif)" }}
-              >
-                {promise.title}
-              </h3>
-              <p className="text-white/80 text-sm leading-relaxed">
-                {promise.body}
-              </p>
+              <div>
+                <p className="text-sm font-bold text-white leading-tight">
+                  {member.role}
+                </p>
+                <p className="text-xs text-white/70 mt-0.5 leading-snug">
+                  {member.sub}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -103,7 +115,7 @@ export function Promise() {
           {[
             { value: "93%", label: "Patients recommend" },
             { value: "4.9★", label: "Average rating" },
-            { value: "5,000+", label: "Lives touched" },
+            { value: "25,000+", label: "Lives touched" },
             { value: "< 7 days", label: "Time to first appt." },
           ].map(({ value, label }) => (
             <div key={label} className="text-center">

@@ -1,132 +1,124 @@
 // ─── Dr. Pradeep Kumar — Real Profile Data ───────────────────────────────────
-// Sources: Apollo247, HexaHealth, Paras Hospitals, Apollomedics
+// Verified against Dr. Kumar's official prescription pad (May 2026).
 
 export const DOCTOR = {
   name: "Dr. Pradeep Kumar",
   title: "MBBS, MD (Medicine), DM (Neurology)",
-  designation: "Consultant Neurologist",
+  designation: "Director — Neurology, Paras Health Kanpur",
   tagline: "Your brain health deserves gentle, expert care.",
   subTagline:
-    "With over 11 years of experience, Dr. Pradeep Kumar offers compassionate, evidence-based neurology care for patients across Lucknow & Kanpur — in a language you'll truly understand.",
+    "With over a decade of experience, Dr. Pradeep Kumar offers compassionate, evidence-based neurology care for patients across Lucknow & Kanpur — in a language you'll truly understand.",
   experience: "11+",
-  patients: "5,000+",
+  patients: "25,000+",
   rating: "4.9",
   ratingCount: "87+",
   recommendationScore: "93%",
   languages: ["Hindi", "English"],
-  registrationNo: "UPSMC-XXXXX",
+  registrationNo: "UPMC-61202",
 
   // ── Education ───────────────────────────────────────────────────────────────
   education: [
     {
       degree: "MBBS",
-      institution: "King George's Medical University (KGMU)",
-      location: "Lucknow, UP",
-      year: "2009",
+      institution: "Motilal Nehru Medical College (MLNMC)",
+      location: "Prayagraj, UP",
+      year: "",
     },
     {
       degree: "MD — General Medicine",
       institution: "King George's Medical University (KGMU)",
       location: "Lucknow, UP",
-      year: "2013",
+      year: "",
     },
     {
       degree: "DM — Neurology",
-      institution: "Dr. Ram Manohar Lohia Institute of Medical Sciences",
+      institution: "Dr. Ram Manohar Lohia Institute of Medical Sciences (RMLIMS)",
       location: "Lucknow, UP",
-      year: "2016",
+      year: "",
     },
   ],
 
   // ── Career Timeline ─────────────────────────────────────────────────────────
   timeline: [
-    { year: "2009", title: "MBBS Completed", body: "King George's Medical University, Lucknow" },
-    { year: "2013", title: "MD General Medicine", body: "Specialised in Internal Medicine, KGMU Lucknow" },
-    { year: "2016", title: "DM Neurology", body: "Advanced Neurology training, RMLIMS Lucknow" },
-    { year: "2017", title: "Joined Apollomedics", body: "Consultant Neurologist, Apollomedics Super Speciality Hospital" },
-    { year: "2020", title: "Paras Hospital, Kanpur", body: "Extended practice to serve patients in Kanpur region" },
+    { year: "2009", title: "MBBS Completed", body: "Motilal Nehru Medical College (MLNMC), Prayagraj" },
+    { year: "2016", title: "MD — General Medicine", body: "Specialised in Internal Medicine, KGMU Lucknow" },
+    { year: "2020", title: "DM — Neurology", body: "Advanced Neurology training, RMLIMS Lucknow" },
+    { year: "2021–2024", title: "Consultant Neurologist, Medanta", body: "Department of Neurology, Lucknow" },
+    { year: "2024–2026", title: "Associate Director, Apollomedics", body: "Apollomedics Super Speciality Hospital, Lucknow" },
+    { year: "2026 – Till Date", title: "Director — Neurology, Paras Health Kanpur", body: "Extended practice to serve patients in Kanpur region" },
   ],
 
   // ── Affiliations ────────────────────────────────────────────────────────────
   affiliations: [
-    { name: "Apollomedics Super Speciality Hospital", city: "Lucknow" },
-    { name: "Paras Hospital", city: "Kanpur" },
-    { name: "Medanta Hospital", city: "Lucknow" },
+    { name: "Paras Health", city: "Kanpur", note: "Director — Neurology (current)" },
+    { name: "Equinox Neuro Clinic", city: "Lucknow — Gomti Nagar", note: "Consulting (Wednesday morning & evening)" },
+    { name: "Apollo Medics, Lucknow", city: "Lucknow", note: "Former Associate Director" },
+    { name: "Medanta, Lucknow", city: "Lucknow", note: "Former Consultant" },
   ],
 
-  // ── Primary Clinic (kept for backward-compat — points to Kanpur as main) ────
+  // ── Professional Memberships ────────────────────────────────────────────────
+  memberships: [
+    "Life Member — Indian Stroke Association (ISA)",
+    "Life Member — Indian Federation of Neuro Rehabilitation (IFNR)",
+    "Platform & Poster Presentation — INSC 2023 & 2025",
+  ],
+
+  // ── Primary Clinic (kept for backward-compat — points to Paras Kanpur) ──────
   clinic: {
-    name: "Paras Hospital",
-    address: "Paras Hospital Premises",
+    name: "Paras Health",
+    address: "Paras Health Hospital",
     city: "Kanpur",
     state: "Uttar Pradesh",
     pin: "208001",
-    phone: "+91-7388-888-888",
-    email: "drpradeep@example.com",
+    phone: "+91-9793440057",
+    email: "equinoxneuro.drpradeep@gmail.com",
     mapEmbed:
-      "https://maps.google.com/maps?q=Paras+Hospital+Kanpur&output=embed",
-    timings: "Mon, Tue, Thu, Fri",
+      "https://maps.google.com/maps?q=Paras+Health+Kanpur&output=embed",
+    timings: "Mon · Tue · Thu · Fri · Sat",
     telehealth: true,
     emergencyAvailable: true,
   },
 
   // ── All Practice Locations ──────────────────────────────────────────────────
-  // Dr. Kumar splits his week across 3 locations. Each card on the site reads
-  // from this list — order here = display order.
+  // Dr. Kumar splits his week across 3 locations. Order here = display order
+  // (Lucknow morning → Lucknow evening → Kanpur).
   clinics: [
     {
-      id: "lucknow-chandan",
-      shortName: "Lucknow — Morning",
-      name: "Lucknow Morning Clinic",
-      addressLine1: "Behind Chandan Hospital",
-      addressLine2: "Faizabad Road",
+      id: "lucknow-equinox",
+      shortName: "Equinox Neuro Clinic",
+      name: "Equinox Neuro Clinic",
+      addressLine1: "Vijyant Khand",
+      addressLine2: "Gomti Nagar",
       city: "Lucknow",
       state: "Uttar Pradesh",
       pin: "226010",
-      phone: "+91-7388-888-888",
-      days: ["Wed", "Sat"],
-      daysSummary: "Morning slots",
-      timings: "Morning hours · call to confirm",
-      mapSearchQuery: "Chandan Hospital Lucknow",
-      mapEmbed:
-        "https://maps.google.com/maps?q=Chandan+Hospital+Lucknow&output=embed",
-      mapsUrl: "https://www.google.com/maps/search/Chandan+Hospital+Lucknow",
-    },
-    {
-      id: "lucknow-pgi",
-      shortName: "Lucknow — Wed Evening",
-      name: "Lucknow Evening Clinic",
-      addressLine1: "Near PGI (SGPGIMS)",
-      addressLine2: "Raebareli Road",
-      city: "Lucknow",
-      state: "Uttar Pradesh",
-      pin: "226014",
-      phone: "+91-7388-888-888",
+      phone: "+91-9793440057",
       days: ["Wed"],
-      daysSummary: "Wednesday evening",
-      timings: "Wednesday evening · call to confirm",
-      mapSearchQuery: "SGPGIMS Lucknow",
+      daysSummary: "Wed: morning & evening",
+      timings: "Wednesday morning & evening · call to confirm",
+      mapSearchQuery: "Vijyant Khand Gomti Nagar Lucknow",
       mapEmbed:
-        "https://maps.google.com/maps?q=SGPGIMS+Lucknow&output=embed",
-      mapsUrl: "https://www.google.com/maps/search/SGPGIMS+Lucknow",
+        "https://maps.google.com/maps?q=Vijyant+Khand+Gomti+Nagar+Lucknow&output=embed",
+      mapsUrl:
+        "https://www.google.com/maps/search/Vijyant+Khand+Gomti+Nagar+Lucknow",
     },
     {
       id: "kanpur-paras",
-      shortName: "Kanpur — Paras",
-      name: "Paras Hospital, Kanpur",
-      addressLine1: "Paras Hospital",
+      shortName: "Kanpur — Paras Health",
+      name: "Paras Health, Kanpur",
+      addressLine1: "Paras Health Hospital",
       addressLine2: "",
       city: "Kanpur",
       state: "Uttar Pradesh",
       pin: "208001",
-      phone: "+91-7388-888-888",
-      days: ["Mon", "Tue", "Thu", "Fri"],
-      daysSummary: "Mon, Tue, Thu, Fri",
-      timings: "Mon · Tue · Thu · Fri",
-      mapSearchQuery: "Paras Hospital Kanpur",
+      phone: "+91-9793440057",
+      days: ["Mon", "Tue", "Thu", "Fri", "Sat"],
+      daysSummary: "Mon, Tue, Thu, Fri, Sat",
+      timings: "Mon · Tue · Thu · Fri · Sat",
+      mapSearchQuery: "Paras Health Kanpur",
       mapEmbed:
-        "https://maps.google.com/maps?q=Paras+Hospital+Kanpur&output=embed",
-      mapsUrl: "https://www.google.com/maps/search/Paras+Hospital+Kanpur",
+        "https://maps.google.com/maps?q=Paras+Health+Kanpur&output=embed",
+      mapsUrl: "https://www.google.com/maps/search/Paras+Health+Kanpur",
     },
   ],
 
@@ -137,27 +129,24 @@ export const DOCTOR = {
     { day: "Wed", location: "Lucknow" },
     { day: "Thu", location: "Kanpur" },
     { day: "Fri", location: "Kanpur" },
-    { day: "Sat", location: "Lucknow" },
-    { day: "Sun", location: "Off" },
+    { day: "Sat", location: "Kanpur" },
+    { day: "Sun", location: "Available" },
   ],
 
   // ── Consultation Fees ───────────────────────────────────────────────────────
   fees: {
-    online: 1000,
-    inPerson: 700,
+    inPerson: 1000,
     currency: "₹",
-    cashback: 150,
     followUp: 500,
   },
 
   // ── Specialisations ─────────────────────────────────────────────────────────
   specialisations: [
-    "Epilepsy & Seizure Disorders",
-    "Migraine & Headache Management",
     "Stroke & Cerebrovascular Diseases",
-    "Parkinson's & Movement Disorders",
-    "Multiple Sclerosis",
+    "Migraine & Headache Management",
+    "Epilepsy & Seizure Disorders",
     "Vertigo & Cervical Disorders",
+    "Parkinson's & Movement Disorders",
     "Neuro Infections & Tropical Neurology",
     "Memory & Cognitive Disorders",
   ],
@@ -201,18 +190,38 @@ export const DOCTOR = {
       color: "gold",
       tagline: "Living well with Parkinson's.",
       description:
-        "Movement disorder specialist care: dopaminergic therapy, Deep Brain Stimulation (DBS) evaluation, physiotherapy coordination, and caregiver support.",
+        "Movement disorder specialist care: dopaminergic therapy optimisation, physiotherapy and neuro-rehabilitation coordination, and comprehensive caregiver support.",
       conditions: ["Parkinson's Disease", "Essential Tremor", "Dystonia", "Ataxia"],
     },
     {
-      id: "ms",
-      name: "Multiple Sclerosis",
-      icon: "💙",
+      id: "myasthenia",
+      name: "Myasthenia Gravis",
+      icon: "💪",
       color: "purple",
-      tagline: "You're not facing this alone.",
+      tagline: "Restoring strength and function.",
       description:
-        "Disease-modifying therapies, infusion centre coordination, relapse management, and long-term monitoring with MRI surveillance protocols.",
-      conditions: ["Relapsing-Remitting MS", "Progressive MS", "Neuromyelitis Optica", "Optic Neuritis"],
+        "Comprehensive management of neuromuscular junction disorders with immunotherapy, cholinesterase inhibitors, plasmapheresis coordination, and long-term monitoring.",
+      conditions: ["Myasthenia Gravis", "Lambert-Eaton Syndrome", "Ocular MG", "Generalised MG"],
+    },
+    {
+      id: "gbs",
+      name: "GBS (Guillain-Barré Syndrome)",
+      icon: "🔬",
+      color: "navy",
+      tagline: "Expert care from diagnosis to recovery.",
+      description:
+        "Rapid diagnosis and management of acute inflammatory polyneuropathy including IVIG therapy, plasmapheresis, respiratory monitoring, and rehabilitation coordination.",
+      conditions: ["Guillain-Barré Syndrome", "CIDP", "Miller Fisher Syndrome", "Acute Polyneuropathy"],
+    },
+    {
+      id: "neuropathy",
+      name: "Neuropathy",
+      icon: "⚙️",
+      color: "sky",
+      tagline: "Relief from nerve pain starts here.",
+      description:
+        "Evaluation and treatment of peripheral nerve disorders including diabetic neuropathy, hereditary neuropathies, and toxic or nutritional causes with nerve conduction studies.",
+      conditions: ["Diabetic Neuropathy", "Peripheral Neuropathy", "Hereditary Neuropathy", "Toxic Neuropathy"],
     },
     {
       id: "memory",
@@ -230,21 +239,29 @@ export const DOCTOR = {
   procedures: [
     "EEG (Electroencephalogram)",
     "Video-EEG Monitoring",
-    "IV Thrombolysis for Stroke",
-    "Deep Brain Stimulation (DBS) Evaluation",
     "Nerve Conduction Studies (NCS)",
     "Electromyography (EMG)",
     "Lumbar Puncture (CSF Analysis)",
-    "Botox Injections for Migraine",
+    "Botox Injections for Migraine & Movement Disorders",
     "Cognitive & Neuropsychological Testing",
+    "Dietician",
+    "Neuro-Rehabilitation",
+  ],
+
+  // ── Neuro-Rehabilitation sub-services ──────────────────────────────────────
+  neuroRehab: [
+    "Physiotherapy",
+    "Speech Therapy",
+    "Psychotherapy",
+    "Occupational Therapy",
+    "Yoga",
+    "Naturopathy",
   ],
 
   // ── Research & Publications ─────────────────────────────────────────────────
   research: [
-    "Published papers on Epilepsy management in Indian Journal of Neurology",
-    "Research on Tropical Neurological Infections in UP region",
     "Workshop presentations on Stroke Thrombolysis protocols",
-    "Active participant in AAN (American Academy of Neurology) CME programs",
+    "Platform & Poster Presentation — INSC 2023 & 2025",
   ],
 
   // ── Testimonials ────────────────────────────────────────────────────────────
@@ -303,23 +320,19 @@ export const DOCTOR = {
   faqs: [
     {
       q: "How quickly can I get a first appointment?",
-      a: "Dr. Pradeep Kumar offers appointments within the same week for most conditions (Mon–Sat, 10 AM–7 PM). For urgent neurological symptoms such as sudden severe headache, vision changes, or weakness on one side, please call immediately for a priority slot.",
+      a: "Dr. Kumar offers appointments within the same week for most conditions. Kanpur (Paras Health) runs Mon, Tue, Thu, Fri & Sat; Lucknow clinics run on Wednesday — morning at Equinox Neuro (Gomti Nagar) and evening at Medicentrum (near SGPGI). For urgent symptoms such as sudden severe headache, vision changes, or weakness on one side, please call immediately for a priority slot.",
     },
     {
       q: "What are the consultation fees?",
-      a: "In-person consultation at Apollomedics is ₹700. Online/telehealth consultation is ₹1,000 with a ₹150 cashback available via Apollo 247. Follow-up visits are ₹500.",
-    },
-    {
-      q: "Does Dr. Pradeep Kumar offer telehealth?",
-      a: "Yes. Telehealth appointments are available via Apollo 247 and HexaHealth, Monday through Saturday. Video consultations work well for follow-ups, medication reviews, and second opinions.",
+      a: "In-person consultation is ₹1,000. Follow-up visits are ₹500.",
     },
     {
       q: "What should I bring to my first appointment?",
       a: "Please bring any previous MRI / CT scan reports, a list of current medications and doses, details of your symptoms and when they started, and your insurance card. Don't worry — our team will guide you through everything.",
     },
     {
-      q: "Is Paras Hospital, Kanpur also available?",
-      a: "Yes, Dr. Pradeep Kumar holds clinics at Paras Hospital, Kanpur. Please call ahead to confirm the schedule, as timings differ from the Lucknow clinic.",
+      q: "Which day should I come to Lucknow vs Kanpur?",
+      a: "Wednesdays are reserved for Lucknow — morning at Equinox Neuro Clinic (Vijyant Khand, Gomti Nagar) and evening at Medicentrum (near SGPGI on Raebareli Road). All other weekdays plus Saturday, Dr. Kumar is at Paras Health, Kanpur. Sunday is also available — please call ahead to confirm.",
     },
     {
       q: "Which insurance plans are accepted?",
@@ -330,18 +343,18 @@ export const DOCTOR = {
   // ── Stats for display ───────────────────────────────────────────────────────
   stats: [
     { value: "11+", label: "Years of Experience" },
-    { value: "5,000+", label: "Patients Treated" },
+    { value: "25,000+", label: "Patients Treated" },
     { value: "93%", label: "Recommendation Score" },
     { value: "< 7", label: "Days to First Appt." },
   ],
 
   // ── Trust badges ────────────────────────────────────────────────────────────
   trust: [
-    { icon: "🏥", name: "Apollomedics Hospital", sub: "Super Speciality, Lucknow" },
-    { icon: "🏛️", name: "KGMU", sub: "MBBS & MD Alumnus" },
-    { icon: "🎓", name: "RMLIMS", sub: "DM Neurology" },
-    { icon: "💊", name: "Paras Hospital", sub: "Kanpur Clinic" },
-    { icon: "📱", name: "Apollo 247", sub: "Online Consultations" },
+    { icon: "🏥", name: "Paras Health", sub: "Director — Neurology, Kanpur" },
+    { icon: "🎓", name: "MLNMC Prayagraj", sub: "MBBS alumnus" },
+    { icon: "🏛️", name: "KGMU Lucknow", sub: "MD Medicine alumnus" },
+    { icon: "🎓", name: "RMLIMS Lucknow", sub: "DM Neurology" },
+    { icon: "🧠", name: "Equinox Neuro Clinic", sub: "Lucknow, Gomti Nagar" },
   ],
 } as const;
 

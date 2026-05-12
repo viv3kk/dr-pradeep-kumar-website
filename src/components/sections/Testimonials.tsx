@@ -110,7 +110,7 @@ export function Testimonials() {
         {/* Trust note */}
         <div className="reveal text-center mt-10">
           <p className="text-sm text-[#A8A29E]">
-            Reviews sourced from Apollo 247 and HexaHealth · Verified patients only
+            Verified patient reviews · Google &amp; Paras Health
           </p>
         </div>
 

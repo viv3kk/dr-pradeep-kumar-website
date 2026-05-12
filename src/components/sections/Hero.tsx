@@ -208,7 +208,7 @@ export function Hero() {
                        hover:border-[#E8714A] hover:text-[#E8714A]
                        transition-all duration-200 cursor-pointer"
           >
-            Meet Dr. Kumar
+            Meet Dr. Pradeep Kumar
             <ChevronRight size={16}/>
           </button>
         </div>
@@ -234,8 +234,8 @@ export function Hero() {
               ))}
             </div>
             <span className="text-sm text-[#57534E]">
-              <strong className="text-[#1C1917]">{DOCTOR.patients} patients</strong>
-              {" "}· {DOCTOR.rating} rating · {DOCTOR.recommendationScore} recommend
+              <strong className="text-[#1C1917]">{DOCTOR.rating} · {DOCTOR.ratingCount} Google reviews</strong>
+              {" "}· {DOCTOR.recommendationScore} recommend
             </span>
           </div>
         </div>
@@ -248,16 +248,16 @@ export function Hero() {
                         flex items-end justify-center gap-8 md:gap-16 overflow-hidden
                         shadow-[0_-4px_40px_rgba(232,113,74,0.08)]">
 
-          {/* Badge 1 */}
+          {/* Badge 1 — current principal practice */}
           <FloatingBadge className="top-6 left-6 md:left-12 float-anim">
             <span className="text-2xl" aria-hidden="true">🏥</span>
             <div>
-              <p className="text-xs font-bold text-[#1C1917] leading-tight">Apollomedics</p>
-              <p className="text-[10px] text-[#A8A29E]">Super Speciality, Lucknow</p>
+              <p className="text-xs font-bold text-[#1C1917] leading-tight">Paras Health</p>
+              <p className="text-[10px] text-[#A8A29E]">Director — Neurology, Kanpur</p>
             </div>
           </FloatingBadge>
 
-          {/* Badge 2 */}
+          {/* Badge 2 — academic credentials */}
           <FloatingBadge className="top-6 right-6 md:right-12 float-anim float-anim-2">
             <span className="text-2xl" aria-hidden="true">🎓</span>
             <div>

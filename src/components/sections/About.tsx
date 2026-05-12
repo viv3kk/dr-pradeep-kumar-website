@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { DOCTOR } from "@/lib/doctor-data";
-import { GraduationCap, Award, BookOpen, Languages } from "lucide-react";
+import { GraduationCap, Award, Languages } from "lucide-react";
 
 const COLOR_MAP: Record<string, string> = {
   coral: "#E8714A",
@@ -132,7 +132,6 @@ export function About() {
               {[
                 { icon: <Award size={14}/>, text: "11+ Years Experience" },
                 { icon: <GraduationCap size={14}/>, text: "DM Neurology" },
-                { icon: <BookOpen size={14}/>, text: "Published Researcher" },
                 { icon: <Languages size={14}/>, text: "Hindi & English" },
               ].map(({ icon, text }) => (
                 <span

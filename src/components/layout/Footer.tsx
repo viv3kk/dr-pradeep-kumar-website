@@ -199,7 +199,7 @@ export function Footer() {
             {[
               { en: "🔒 HIPAA Compliant", hi: "🔒 HIPAA अनुपालित" },
               { en: "♿ WCAG 2.1 AA", hi: "♿ WCAG 2.1 AA" },
-              { en: "🏆 Apollo 247 Verified", hi: "🏆 Apollo 247 सत्यापित" },
+              { en: "🏆 Paras Health Verified", hi: "🏆 पारस हेल्थ सत्यापित" },
             ].map((chip) => (
               <span
                 key={chip.en}

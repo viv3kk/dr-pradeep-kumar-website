@@ -8,15 +8,11 @@ import {
   MapPinIcon,
   ClockIcon,
   PhoneIcon,
-  VideoIcon,
   CalendarIcon,
 } from "@/components/icons/MedicalIcons";
 
-type ConsultType = "in-person" | "online";
-
 export function Connect() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [consultType, setConsultType] = useState<ConsultType>("in-person");
   const [submitted, setSubmitted] = useState(false);
   const [activeClinic, setActiveClinic] = useState(0);
   const [form, setForm] = useState({
@@ -48,10 +44,6 @@ export function Connect() {
     // In production this would POST to an API route
     setSubmitted(true);
   };
-
-  const fee = consultType === "in-person" ? DOCTOR.fees.inPerson : DOCTOR.fees.online;
-  const feeLabel =
-    consultType === "in-person" ? "In-person consultation" : "Video consultation";
 
   const clinic = DOCTOR.clinics[activeClinic];
 
@@ -116,45 +108,14 @@ export function Connect() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
-                {/* Consult type toggle */}
-                <div>
-                  <label className="block text-xs font-semibold uppercase tracking-widest text-[#A8A29E] mb-3">
-                    Consultation type
-                  </label>
-                  <div className="flex rounded-2xl border border-[#E7E5E4] overflow-hidden p-1 bg-[#FAF8F5]">
-                    {(["in-person", "online"] as ConsultType[]).map((type) => (
-                      <button
-                        key={type}
-                        type="button"
-                        onClick={() => setConsultType(type)}
-                        className={`flex-1 flex items-center justify-center gap-2 text-sm font-semibold py-3 px-4 rounded-xl transition-all duration-200 cursor-pointer ${
-                          consultType === type
-                            ? "bg-white shadow-sm text-[#1C1917] border border-[#E7E5E4]"
-                            : "text-[#A8A29E] hover:text-[#57534E]"
-                        }`}
-                        aria-pressed={consultType === type}
-                      >
-                        {type === "in-person" ? (
-                          <ClinicIcon size={16} />
-                        ) : (
-                          <VideoIcon size={16} />
-                        )}
-                        {type === "in-person" ? "In-person" : "Online"}
-                      </button>
-                    ))}
-                  </div>
-                  <p className="mt-2 text-xs text-[#A8A29E]">
-                    {feeLabel} ·{" "}
-                    <span className="font-semibold text-[#57534E]">
-                      {DOCTOR.fees.currency}
-                      {fee}
+                {/* Fee info */}
+                <div className="rounded-2xl bg-[#FFF4EE] border border-[#F5C4B3] px-4 py-3 flex items-center gap-3">
+                  <ClinicIcon size={18} className="text-[#E8714A] flex-shrink-0" />
+                  <p className="text-sm text-[#57534E]">
+                    In-person consultation ·{" "}
+                    <span className="font-semibold text-[#1C1917]">
+                      {DOCTOR.fees.currency}{DOCTOR.fees.inPerson}
                     </span>
-                    {consultType === "online" && (
-                      <span className="text-[#16907A]">
-                        {" "}
-                        (₹{DOCTOR.fees.cashback} cashback via Apollo 247)
-                      </span>
-                    )}
                   </p>
                 </div>
 
@@ -263,7 +224,7 @@ export function Connect() {
               </p>
               <div className="grid grid-cols-7 gap-1">
                 {DOCTOR.weeklySchedule.map((d) => {
-                  const isOff = d.location === "Off";
+                  const isAvailable = d.location === "Available";
                   return (
                     <div
                       key={d.day}
@@ -272,7 +233,9 @@ export function Connect() {
                           ? "bg-[#EEF2FF] border border-[#C7D2FE]"
                           : d.location === "Lucknow"
                             ? "bg-[#FFF4EE] border border-[#F5C4B3]"
-                            : "bg-[#FAF8F5] border border-[#E7E5E4]"
+                            : isAvailable
+                              ? "bg-[#EDFAF6] border border-[#A7E8D8]"
+                              : "bg-[#FAF8F5] border border-[#E7E5E4]"
                       }`}
                     >
                       <p className="text-[10px] font-bold uppercase text-[#A8A29E] tracking-widest">
@@ -284,10 +247,12 @@ export function Connect() {
                             ? "text-[#4F46E5]"
                             : d.location === "Lucknow"
                               ? "text-[#E8714A]"
-                              : "text-[#A8A29E]"
+                              : isAvailable
+                                ? "text-[#16907A]"
+                                : "text-[#A8A29E]"
                         }`}
                       >
-                        {isOff ? "—" : d.location}
+                        {isAvailable ? "Avail." : d.location}
                       </p>
                     </div>
                   );
@@ -414,35 +379,6 @@ export function Connect() {
               </a>
             </div>
 
-            {/* Fees */}
-            <div className="reveal grid grid-cols-2 gap-3">
-              <div className="rounded-2xl bg-[#FFF4EE] border border-[#F5C4B3] p-4 text-center">
-                <p className="text-xs text-[#A8A29E] mb-1">In-person</p>
-                <p
-                  className="font-serif text-2xl font-bold text-[#E8714A]"
-                  style={{ fontFamily: "var(--font-fraunces, 'Fraunces', serif)" }}
-                >
-                  {DOCTOR.fees.currency}
-                  {DOCTOR.fees.inPerson}
-                </p>
-                <p className="text-[10px] text-[#A8A29E] mt-0.5">
-                  Follow-up ₹{DOCTOR.fees.followUp}
-                </p>
-              </div>
-              <div className="rounded-2xl bg-[#EDFAF6] border border-[#A7E8D8] p-4 text-center">
-                <p className="text-xs text-[#A8A29E] mb-1">Online</p>
-                <p
-                  className="font-serif text-2xl font-bold text-[#16907A]"
-                  style={{ fontFamily: "var(--font-fraunces, 'Fraunces', serif)" }}
-                >
-                  {DOCTOR.fees.currency}
-                  {DOCTOR.fees.online}
-                </p>
-                <p className="text-[10px] text-[#16907A] mt-0.5">
-                  ₹{DOCTOR.fees.cashback} cashback
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

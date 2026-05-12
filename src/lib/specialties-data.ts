@@ -409,8 +409,8 @@ function stub(
       },
     },
     overview: {
-      en: "This page is being prepared. Dr. Kumar already treats this condition at Apollomedics Lucknow and Paras Hospital Kanpur. Please book a consultation in the meantime.",
-      hi: "यह पन्ना तैयार हो रहा है। डॉ. कुमार लखनऊ के अपोलोमेडिक्स और कानपुर के पारस अस्पताल में इस बीमारी का इलाज पहले से कर रहे हैं। तब तक कृपया परामर्श बुक करें।",
+      en: "This page is being prepared. Dr. Kumar already treats this condition at Paras Health Kanpur and his Lucknow clinics (Equinox Neuro, Medicentrum). Please book a consultation in the meantime.",
+      hi: "यह पन्ना तैयार हो रहा है। डॉ. कुमार पारस हेल्थ कानपुर और लखनऊ के Equinox Neuro और Medicentrum क्लिनिक में इस बीमारी का इलाज पहले से कर रहे हैं। तब तक कृपया परामर्श बुक करें।",
     },
     topics: [],
     caregiverSection: { en: "", hi: "" },
