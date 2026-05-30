@@ -161,3 +161,106 @@ export function NeuropathicPainIcon({ size = 56, ...rest }: IconProps) {
     </svg>
   );
 }
+
+/* ─── 7. Vertigo ───────────────────────────────────────────────
+   Concentric rotation arcs + arrowhead suggesting spin/dizziness,
+   with a centre anchor dot (inner ear vestibular reference). */
+export function VertigoIcon({ size = 56, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      {/* Outer rotation arc */}
+      <path d="M52 32 A20 20 0 1 1 42 13" strokeWidth="2.2" />
+      <path d="M42 13 L38 10 M42 13 L45 9" strokeWidth="1.8" />
+      {/* Middle arc */}
+      <path d="M46 32 A14 14 0 1 1 38 20" strokeWidth="1.8" opacity="0.55" />
+      {/* Inner anchor */}
+      <circle cx="32" cy="32" r="3.5" />
+      <circle cx="32" cy="32" r="1.4" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+/* ─── 8. Neuro Infections ──────────────────────────────────────
+   Brain outline with small pathogen circles and radiating spikes
+   inside, suggesting CNS infection. */
+export function NeuroInfectionsIcon({ size = 56, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      {/* Brain outline */}
+      <path d="M32 13C22 13 15 19 15 27C15 31 17 33 15 35C15 39 17 41 15 43C15 50 22 52 32 52C42 52 49 50 49 43C49 41 47 39 49 35C47 33 49 31 49 27C49 19 42 13 32 13Z" />
+      {/* Pathogen body */}
+      <circle cx="24" cy="30" r="4.5" strokeWidth="1.8" />
+      {/* Pathogen spikes */}
+      <path d="M24 24 V21" strokeWidth="1.4" />
+      <path d="M29 26 L31 24" strokeWidth="1.4" />
+      <path d="M29 34 L31 36" strokeWidth="1.4" />
+      <path d="M24 36 V39" strokeWidth="1.4" />
+      <path d="M19 34 L17 36" strokeWidth="1.4" />
+      <path d="M19 26 L17 24" strokeWidth="1.4" />
+      {/* Second smaller pathogen */}
+      <circle cx="41" cy="37" r="3" strokeWidth="1.6" opacity="0.65" />
+      <path d="M41 33 V31 M44 35 L46 33 M44 39 L46 41 M41 41 V43 M38 39 L36 41 M38 35 L36 33" strokeWidth="1.2" opacity="0.55" />
+    </svg>
+  );
+}
+
+/* ─── 9. Neuro Rehabilitation ──────────────────────────────────
+   Stylised walking figure (stick) ascending steps, conveying
+   recovery and progressive improvement. */
+export function NeuroRehabilitationIcon({ size = 56, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      {/* Head */}
+      <circle cx="24" cy="11" r="5" />
+      {/* Torso */}
+      <path d="M24 16 L24 30" />
+      {/* Arms — one forward, one back */}
+      <path d="M24 22 L14 26 M24 22 L34 18" />
+      {/* Legs — stride */}
+      <path d="M24 30 L16 44 M24 30 L33 42" />
+      {/* Steps (ascending left to right) */}
+      <path d="M38 50 H52 V40 H52" strokeWidth="1.8" opacity="0.5" />
+      <path d="M38 40 H46 V30" strokeWidth="1.8" opacity="0.5" />
+      {/* Upward arrow */}
+      <path d="M52 28 V14 M52 14 L48 18 M52 14 L56 18" strokeWidth="1.8" opacity="0.7" />
+    </svg>
+  );
+}
+
+/* ─── 10. Back Pain ────────────────────────────────────────────
+   Lumbar spine column (stacked vertebrae) with pain-wave arcs
+   radiating from the lower lumbar region. */
+export function BackPainIcon({ size = 56, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      {/* Vertebrae stack */}
+      <rect x="24" y="8"  width="14" height="7" rx="2" />
+      <rect x="24" y="18" width="14" height="7" rx="2" />
+      <rect x="24" y="28" width="14" height="7" rx="2" />
+      <rect x="24" y="38" width="14" height="7" rx="2" />
+      <rect x="24" y="48" width="14" height="7" rx="2" />
+      {/* Pain arcs at lumbar (3rd–4th) */}
+      <path d="M39 33 Q46 32 43 38" strokeWidth="1.8" opacity="0.85" />
+      <path d="M39 36 Q49 32 46 43" strokeWidth="1.6" opacity="0.5" />
+    </svg>
+  );
+}
+
+/* ─── 11. Cervical & Neck Pain ─────────────────────────────────
+   Skull base + cervical vertebrae (C1–C4) with pain arcs
+   radiating from the upper cervical region. */
+export function CervicalNeckPainIcon({ size = 56, ...rest }: IconProps) {
+  return (
+    <svg {...base(size)} {...rest}>
+      {/* Skull base */}
+      <path d="M20 20 C20 9 44 9 44 20 C44 27 39 29 32 29 C25 29 20 27 20 20Z" />
+      {/* Cervical vertebrae C1–C4 */}
+      <rect x="25" y="31" width="14" height="6" rx="1.5" />
+      <rect x="25" y="40" width="14" height="6" rx="1.5" />
+      <rect x="25" y="49" width="14" height="6" rx="1.5" />
+      {/* Pain arcs at upper cervical */}
+      <path d="M40 34 Q47 33 44 39" strokeWidth="1.8" opacity="0.85" />
+      <path d="M40 37 Q50 33 47 43" strokeWidth="1.6" opacity="0.5" />
+    </svg>
+  );
+}
