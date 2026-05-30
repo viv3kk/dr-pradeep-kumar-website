@@ -7,16 +7,26 @@ import {
   DementiaIcon,
   EpilepsyIcon,
   NeuropathicPainIcon,
+  VertigoIcon,
+  NeuroInfectionsIcon,
+  NeuroRehabilitationIcon,
+  BackPainIcon,
+  CervicalNeckPainIcon,
 } from "./icons/SpecialtyIcons";
 
 /* ── Map from specialty slug → custom icon component ─────────── */
 const REGISTRY: Record<string, React.ComponentType<{ size?: number }>> = {
-  "headache-and-vertigo": HeadacheVertigoIcon,
+  "headache-disorders": HeadacheVertigoIcon,
+  vertigo: VertigoIcon,
   stroke: StrokeIcon,
-  "parkinsons-and-movement-disorders": MovementDisorderIcon,
-  "dementia-and-memory-dysfunction": DementiaIcon,
-  "epilepsy-and-attacks": EpilepsyIcon,
-  "neuropathic-pain": NeuropathicPainIcon,
+  "epilepsy-and-seizures": EpilepsyIcon,
+  "parkinsonism-and-movement-disorders": MovementDisorderIcon,
+  "dementia-and-alzheimers": DementiaIcon,
+  neuropathy: NeuropathicPainIcon,
+  "neuro-infections": NeuroInfectionsIcon,
+  "neuro-rehabilitation": NeuroRehabilitationIcon,
+  "back-pain": BackPainIcon,
+  "cervical-and-neck-pain": CervicalNeckPainIcon,
 };
 
 interface Props {

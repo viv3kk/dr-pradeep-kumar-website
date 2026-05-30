@@ -99,21 +99,21 @@ export interface Specialty {
    SPECIALTY 1 — Headache & Vertigo  (FULLY POPULATED)
 ═══════════════════════════════════════════════════════════ */
 const HEADACHE_AND_VERTIGO: Specialty = {
-  slug: "headache-and-vertigo",
+  slug: "headache-disorders",
   name: {
-    en: "Headache & Vertigo",
-    hi: "सिरदर्द और चक्कर",
+    en: "Headache Disorders",
+    hi: "सिरदर्द विकार",
   },
   shortName: {
-    en: "Headache & Vertigo",
-    hi: "सिरदर्द और चक्कर",
+    en: "Headache Disorders",
+    hi: "सिरदर्द विकार",
   },
   color: "coral",
   icon: "🧠",
   hero: {
     eyebrow: {
-      en: "Headache & Vertigo Clinic",
-      hi: "सिरदर्द और चक्कर क्लिनिक",
+      en: "Headache Disorders Clinic",
+      hi: "सिरदर्द विकार क्लिनिक",
     },
     tagline: {
       en: "When the pain — or the spinning — won't let you live.",
@@ -430,29 +430,34 @@ function stub(
 /* ── Master export ─────────────────────────────────────────── */
 export const SPECIALTIES: Specialty[] = [
   HEADACHE_AND_VERTIGO,
-  stub("stroke", "Stroke", "स्ट्रोक", "navy", "❤️‍🩹"),
+  stub("vertigo", "Vertigo", "चक्कर (वर्टिगो)", "teal", "🌀"),
+  stub("stroke", "Stroke & Brain Attack", "स्ट्रोक और ब्रेन अटैक", "navy", "❤️‍🩹"),
   stub(
-    "parkinsons-and-movement-disorders",
-    "Parkinson's & Movement Disorders",
-    "पार्किंसन और मूवमेंट डिसऑर्डर",
-    "gold",
-    "🌿"
-  ),
-  stub(
-    "dementia-and-memory-dysfunction",
-    "Dementia & Memory Dysfunction",
-    "डिमेंशिया और याददाश्त",
-    "sky",
-    "🌙"
-  ),
-  stub(
-    "epilepsy-and-attacks",
-    "Epilepsy & Attacks",
+    "epilepsy-and-seizures",
+    "Epilepsy & Seizures",
     "मिर्गी और दौरे",
     "teal",
     "⚡"
   ),
-  stub("neuropathic-pain", "Neuropathic Pain", "नस का दर्द", "purple", "💜"),
+  stub(
+    "parkinsonism-and-movement-disorders",
+    "Parkinsonism & Movement Disorders",
+    "पार्किंसनिज़्म और मूवमेंट डिसऑर्डर",
+    "gold",
+    "🌿"
+  ),
+  stub(
+    "dementia-and-alzheimers",
+    "Dementia & Alzheimer's",
+    "डिमेंशिया और अल्ज़ाइमर",
+    "sky",
+    "🌙"
+  ),
+  stub("neuropathy", "Neuropathy", "न्यूरोपैथी (नस की बीमारी)", "purple", "💜"),
+  stub("neuro-infections", "Neuro Infections", "न्यूरो संक्रमण", "navy", "🦠"),
+  stub("neuro-rehabilitation", "Neuro Rehabilitation", "न्यूरो पुनर्वास", "gold", "🏃"),
+  stub("back-pain", "Back Pain", "पीठ दर्द", "sky", "🦴"),
+  stub("cervical-and-neck-pain", "Cervical & Neck Pain", "सर्वाइकल और गर्दन दर्द", "coral", "🫀"),
 ];
 
 /* ── Lookup helper ─────────────────────────────────────────── */

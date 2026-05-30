@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useTransition } from "react";
 import {
   Menu,
   X,
@@ -15,6 +15,7 @@ import { SPECIALTIES, t as tBilingual } from "@/lib/specialties-data";
 import { COLORS } from "@/lib/specialty-colors";
 import { SpecialtyIcon } from "@/components/specialty/SpecialtyIcon";
 import { cn } from "@/lib/utils";
+import { usePathname as useRawPathname } from "next/navigation";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import type { Locale } from "@/i18n/routing";
@@ -29,9 +30,18 @@ export function Navbar() {
 
   const locale = useLocale() as Locale;
   const tNav = useTranslations("nav");
-  const pathname = usePathname();
+  const pathname = usePathname();         // next-intl: locale-stripped path
+  const rawPathname = useRawPathname();   // next/navigation: full path e.g. /hi
   const router = useRouter();
   const isHi = locale === "hi";
+  const [isPending, startTransition] = useTransition();
+
+  // Derive the active locale directly from the URL — avoids useLocale() lag
+  // where the hook stays stale after a client-side locale switch.
+  const activeLocale: Locale =
+    (routing.locales.find(
+      (l) => rawPathname === `/${l}` || rawPathname.startsWith(`/${l}/`)
+    ) as Locale) ?? routing.defaultLocale;
 
   /* ── Scroll detection ─────────────────────────────────────── */
   useEffect(() => {
@@ -93,8 +103,20 @@ export function Navbar() {
   );
 
   const switchLocale = (next: Locale) => {
-    if (next === locale) return;
-    router.replace(pathname, { locale: next });
+    if (isPending) return;
+    // Defensively strip any locale prefix that usePathname() may not have
+    // stripped yet during an in-flight navigation (useLocale lags behind
+    // usePathname, causing "/hi" to pass through unstripped → "/hi/hi").
+    let safePath: string = pathname;
+    for (const l of routing.locales) {
+      if (safePath === `/${l}` || safePath.startsWith(`/${l}/`)) {
+        safePath = safePath.slice(`/${l}`.length) || "/";
+        break;
+      }
+    }
+    startTransition(() => {
+      router.replace(safePath as "/", { locale: next });
+    });
   };
 
   /* Hover dropdown with delay so the cursor can travel to it */
@@ -261,7 +283,7 @@ export function Navbar() {
           {/* ── Right side actions ────────────────────────────── */}
           <div className="flex items-center gap-1.5 md:gap-2 flex-shrink-0">
             {/* Locale toggle — always visible */}
-            <LocaleToggle current={locale} onChange={switchLocale} />
+            <LocaleToggle current={activeLocale} onChange={switchLocale} isPending={isPending} />
 
             {/* Phone — icon-only md→2xl, full number 2xl+ */}
             <a
@@ -331,7 +353,7 @@ export function Navbar() {
           >
             {isHi ? "भाषा" : "Language"}
           </span>
-          <LocaleToggle current={locale} onChange={switchLocale} />
+          <LocaleToggle current={activeLocale} onChange={switchLocale} isPending={isPending} />
         </div>
 
         {/* Scrollable nav body */}
@@ -472,13 +494,15 @@ const navLinkCls = (isHi: boolean) =>
 function LocaleToggle({
   current,
   onChange,
+  isPending = false,
 }: {
   current: Locale;
   onChange: (next: Locale) => void;
+  isPending?: boolean;
 }) {
   return (
     <div
-      className="flex items-center bg-[#E7E5E4]/70 rounded-full p-0.5"
+      className={`flex items-center bg-[#E7E5E4]/70 rounded-full p-0.5 transition-opacity ${isPending ? "opacity-50 pointer-events-none" : ""}`}
       role="group"
       aria-label="Language switcher"
     >
@@ -488,6 +512,7 @@ function LocaleToggle({
           type="button"
           onClick={() => onChange(l)}
           aria-pressed={current === l}
+          disabled={isPending}
           className={`text-xs font-bold px-2.5 sm:px-3 py-1.5 rounded-full transition-colors cursor-pointer min-w-[34px] ${
             current === l
               ? "bg-white text-[#1C1917] shadow-sm"

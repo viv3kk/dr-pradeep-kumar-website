@@ -142,26 +142,40 @@ export const DOCTOR = {
 
   // ── Specialisations ─────────────────────────────────────────────────────────
   specialisations: [
-    "Stroke & Cerebrovascular Diseases",
-    "Migraine & Headache Management",
-    "Epilepsy & Seizure Disorders",
-    "Vertigo & Cervical Disorders",
-    "Parkinson's & Movement Disorders",
+    "Acute Stroke & Brain Attack Management",
+    "Headache Disorders & Migraine",
+    "Epilepsy & Seizures",
+    "Vertigo",
+    "Dementia & Alzheimer's",
+    "Parkinsonism & Movement Disorders",
     "Neuro Infections & Tropical Neurology",
-    "Memory & Cognitive Disorders",
+    "Neuro Rehabilitation",
+    "Neuropathy",
+    "Back Pain",
+    "Cervical & Neck Pain",
   ],
 
   // ── Services ────────────────────────────────────────────────────────────────
   services: [
     {
-      id: "migraine",
-      name: "Migraine & Headache",
+      id: "headache",
+      name: "Headache Disorders",
       icon: "🧠",
       color: "coral",
       tagline: "Freedom from pain starts here.",
       description:
-        "Personalised treatment plans including CGRP inhibitors, Botox therapy, trigger identification, and lifestyle modifications for chronic and episodic migraine.",
+        "Personalised treatment plans including CGRP inhibitors, Botox therapy, trigger identification, and lifestyle modifications for chronic migraine, cluster, and tension headaches.",
       conditions: ["Chronic Migraine", "Cluster Headache", "Tension Headache", "Secondary Headache"],
+    },
+    {
+      id: "vertigo",
+      name: "Vertigo",
+      icon: "🌀",
+      color: "teal",
+      tagline: "Stop the world from spinning.",
+      description:
+        "Expert diagnosis and management of vestibular disorders including BPPV repositioning manoeuvres, vestibular rehabilitation, and treatment of central vertigo causes.",
+      conditions: ["BPPV", "Vestibular Neuritis", "Ménière's Disease", "Central Vertigo"],
     },
     {
       id: "epilepsy",
@@ -175,23 +189,83 @@ export const DOCTOR = {
     },
     {
       id: "stroke",
-      name: "Stroke & TIA",
+      name: "Stroke & Brain Attack",
       icon: "❤️‍🩹",
       color: "navy",
       tagline: "Every minute counts — we act fast.",
       description:
         "Rapid stroke assessment, IV thrombolysis (clot-busting therapy), mechanical thrombectomy coordination, and comprehensive secondary prevention planning.",
-      conditions: ["Ischaemic Stroke", "TIA", "Haemorrhagic Stroke", "Stroke Rehabilitation"],
+      conditions: ["Acute Stroke", "TIA", "Haemorrhagic Stroke", "Stroke Rehabilitation"],
     },
     {
-      id: "parkinsons",
-      name: "Parkinson's Disease",
+      id: "parkinsonism",
+      name: "Parkinsonism & Movement Disorders",
       icon: "🌿",
       color: "gold",
-      tagline: "Living well with Parkinson's.",
+      tagline: "Living well, moving better.",
       description:
         "Movement disorder specialist care: dopaminergic therapy optimisation, physiotherapy and neuro-rehabilitation coordination, and comprehensive caregiver support.",
       conditions: ["Parkinson's Disease", "Essential Tremor", "Dystonia", "Ataxia"],
+    },
+    {
+      id: "dementia",
+      name: "Dementia & Alzheimer's",
+      icon: "🌙",
+      color: "sky",
+      tagline: "Clarity through careful assessment.",
+      description:
+        "Cognitive screening, neuropsychological evaluation, Alzheimer's diagnosis, and comprehensive memory management programmes for patients and families.",
+      conditions: ["Alzheimer's Disease", "Vascular Dementia", "MCI", "Frontotemporal Dementia"],
+    },
+    {
+      id: "neuropathy",
+      name: "Neuropathy",
+      icon: "⚙️",
+      color: "purple",
+      tagline: "Relief from nerve pain starts here.",
+      description:
+        "Evaluation and treatment of peripheral nerve disorders including diabetic neuropathy, hereditary neuropathies, and toxic or nutritional causes with nerve conduction studies.",
+      conditions: ["Diabetic Neuropathy", "Peripheral Neuropathy", "Hereditary Neuropathy", "Toxic Neuropathy"],
+    },
+    {
+      id: "neuro-infections",
+      name: "Neuro Infections",
+      icon: "🦠",
+      color: "navy",
+      tagline: "Protecting the nervous system.",
+      description:
+        "Diagnosis and management of infections affecting the brain and nervous system, including meningitis, encephalitis, neurocysticercosis, and tropical neurological diseases.",
+      conditions: ["Bacterial Meningitis", "Viral Encephalitis", "Neurocysticercosis", "Tubercular Meningitis"],
+    },
+    {
+      id: "neuro-rehabilitation",
+      name: "Neuro Rehabilitation",
+      icon: "🏃",
+      color: "gold",
+      tagline: "Recovery, one step at a time.",
+      description:
+        "Structured rehabilitation programmes for patients recovering from stroke, TBI, Parkinson's, and other neurological conditions — integrating physiotherapy, speech therapy, and occupational therapy.",
+      conditions: ["Post-Stroke Rehab", "TBI Recovery", "Spasticity Management", "Gait Disorders"],
+    },
+    {
+      id: "back-pain",
+      name: "Back Pain",
+      icon: "🦴",
+      color: "sky",
+      tagline: "Back to living pain-free.",
+      description:
+        "Neurological evaluation of chronic and acute back pain including disc disease, radiculopathy, and spinal cord involvement, with targeted management and rehabilitation guidance.",
+      conditions: ["Lumbar Disc Disease", "Radiculopathy", "Sciatica", "Spinal Stenosis"],
+    },
+    {
+      id: "cervical-pain",
+      name: "Cervical & Neck Pain",
+      icon: "🫀",
+      color: "coral",
+      tagline: "Ease the burden on your neck.",
+      description:
+        "Expert assessment of cervical spondylosis, myelopathy, and neck-related neurological symptoms with targeted medical and rehabilitative management.",
+      conditions: ["Cervical Spondylosis", "Cervical Myelopathy", "Cervical Radiculopathy", "Whiplash"],
     },
     {
       id: "myasthenia",
@@ -212,26 +286,6 @@ export const DOCTOR = {
       description:
         "Rapid diagnosis and management of acute inflammatory polyneuropathy including IVIG therapy, plasmapheresis, respiratory monitoring, and rehabilitation coordination.",
       conditions: ["Guillain-Barré Syndrome", "CIDP", "Miller Fisher Syndrome", "Acute Polyneuropathy"],
-    },
-    {
-      id: "neuropathy",
-      name: "Neuropathy",
-      icon: "⚙️",
-      color: "sky",
-      tagline: "Relief from nerve pain starts here.",
-      description:
-        "Evaluation and treatment of peripheral nerve disorders including diabetic neuropathy, hereditary neuropathies, and toxic or nutritional causes with nerve conduction studies.",
-      conditions: ["Diabetic Neuropathy", "Peripheral Neuropathy", "Hereditary Neuropathy", "Toxic Neuropathy"],
-    },
-    {
-      id: "memory",
-      name: "Memory & Dementia",
-      icon: "🌙",
-      color: "sky",
-      tagline: "Clarity through careful assessment.",
-      description:
-        "Cognitive screening, neuropsychological evaluation, Alzheimer's diagnosis, and comprehensive memory management programmes for patients and families.",
-      conditions: ["Alzheimer's Disease", "Vascular Dementia", "MCI", "Frontotemporal Dementia"],
     },
   ],
 
