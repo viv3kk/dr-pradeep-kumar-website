@@ -27,7 +27,7 @@ export function SpecialtyMidCTA({ color }: Props) {
 
   return (
     <section className="py-12 md:py-16 bg-white">
-      <div className="max-w-[760px] mx-auto px-6 md:px-10">
+      <div className="max-w-[1120px] mx-auto px-6 md:px-10">
         <div
           className="rounded-3xl border p-8 md:p-10 text-center"
           style={{ backgroundColor: c.bg, borderColor: c.border }}

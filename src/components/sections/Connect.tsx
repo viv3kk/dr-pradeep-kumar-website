@@ -51,7 +51,7 @@ export function Connect() {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-24 md:py-32 bg-[#FAF8F5]"
+      className="pt-24 md:pt-32 pb-16 md:pb-20 bg-[#FAF8F5]"
       aria-label="Book an appointment"
     >
       <div className="max-w-[1120px] mx-auto px-6 md:px-10">
@@ -69,6 +69,49 @@ export function Connect() {
               first step together.
             </em>
           </h2>
+        </div>
+
+        {/* Weekly schedule ribbon — full width */}
+        <div className="reveal bg-white rounded-3xl border border-[#E7E5E4] p-4 mb-6">
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#A8A29E] mb-3 px-2">
+            Where Dr. Kumar is this week
+          </p>
+          <div className="grid grid-cols-7 gap-1.5">
+            {DOCTOR.weeklySchedule.map((d) => {
+              const isAvailable = d.location === "Available";
+              return (
+                <div
+                  key={d.day}
+                  className={`rounded-xl py-2.5 px-1 text-center ${
+                    d.location === "Kanpur"
+                      ? "bg-[#EEF2FF] border border-[#C7D2FE]"
+                      : d.location === "Lucknow"
+                        ? "bg-[#FFF4EE] border border-[#F5C4B3]"
+                        : isAvailable
+                          ? "bg-[#EDFAF6] border border-[#A7E8D8]"
+                          : "bg-[#FAF8F5] border border-[#E7E5E4]"
+                  }`}
+                >
+                  <p className="text-[10px] font-bold uppercase text-[#A8A29E] tracking-widest">
+                    {d.day}
+                  </p>
+                  <p
+                    className={`text-[11px] font-semibold mt-0.5 ${
+                      d.location === "Kanpur"
+                        ? "text-[#4F46E5]"
+                        : d.location === "Lucknow"
+                          ? "text-[#E8714A]"
+                          : isAvailable
+                            ? "text-[#16907A]"
+                            : "text-[#A8A29E]"
+                    }`}
+                  >
+                    {isAvailable ? "Avail." : d.location}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
@@ -217,49 +260,6 @@ export function Connect() {
 
           {/* ─── Right — clinics + map ──────────────────────────── */}
           <div className="flex flex-col gap-5">
-            {/* Weekly schedule ribbon */}
-            <div className="reveal bg-white rounded-3xl border border-[#E7E5E4] p-4">
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#A8A29E] mb-3 px-2">
-                Where Dr. Kumar is this week
-              </p>
-              <div className="grid grid-cols-7 gap-1">
-                {DOCTOR.weeklySchedule.map((d) => {
-                  const isAvailable = d.location === "Available";
-                  return (
-                    <div
-                      key={d.day}
-                      className={`rounded-xl py-2 px-1 text-center ${
-                        d.location === "Kanpur"
-                          ? "bg-[#EEF2FF] border border-[#C7D2FE]"
-                          : d.location === "Lucknow"
-                            ? "bg-[#FFF4EE] border border-[#F5C4B3]"
-                            : isAvailable
-                              ? "bg-[#EDFAF6] border border-[#A7E8D8]"
-                              : "bg-[#FAF8F5] border border-[#E7E5E4]"
-                      }`}
-                    >
-                      <p className="text-[10px] font-bold uppercase text-[#A8A29E] tracking-widest">
-                        {d.day}
-                      </p>
-                      <p
-                        className={`text-[11px] font-semibold mt-0.5 ${
-                          d.location === "Kanpur"
-                            ? "text-[#4F46E5]"
-                            : d.location === "Lucknow"
-                              ? "text-[#E8714A]"
-                              : isAvailable
-                                ? "text-[#16907A]"
-                                : "text-[#A8A29E]"
-                        }`}
-                      >
-                        {isAvailable ? "Avail." : d.location}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
             {/* Clinic selector cards (tabs) */}
             <div className="reveal grid grid-cols-3 gap-2.5">
               {DOCTOR.clinics.map((c, i) => {

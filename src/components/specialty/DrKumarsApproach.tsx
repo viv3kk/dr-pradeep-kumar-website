@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { t, type Bilingual } from "@/lib/specialties-data";
 import { COLORS } from "@/lib/specialty-colors";
 import type { SpecialtyColor } from "@/lib/specialties-data";
 import type { Locale } from "@/i18n/routing";
 import { DOCTOR } from "@/lib/doctor-data";
+import { RichText } from "./RichText";
 
 interface Props {
   content: Bilingual;
@@ -26,7 +28,7 @@ export function DrKumarsApproach({ content, color }: Props) {
       style={{ backgroundColor: c.bg }}
       aria-labelledby="approach-heading"
     >
-      <div className="max-w-[860px] mx-auto px-6 md:px-10">
+      <div className="max-w-[1120px] mx-auto px-6 md:px-10">
         <div className="grid md:grid-cols-[1fr_auto] gap-10 items-start">
           <div>
             <span
@@ -48,13 +50,12 @@ export function DrKumarsApproach({ content, color }: Props) {
             >
               {tPage("drKumarsApproach")}
             </h2>
-            <p
-              className={`text-[17px] md:text-[18px] leading-[1.85] text-[#3F3A36] ${
+            <RichText
+              text={t(content, locale)}
+              paragraphClassName={`text-[17px] md:text-[18px] leading-[1.85] text-[#3F3A36] ${
                 isHi ? "font-hi lang-hi" : ""
               }`}
-            >
-              {t(content, locale)}
-            </p>
+            />
           </div>
 
           {/* Compact doctor card */}
@@ -64,13 +65,13 @@ export function DrKumarsApproach({ content, color }: Props) {
             aria-label="About Dr. Kumar"
           >
             <div className="flex items-center gap-3 mb-4">
-              <span
-                className="w-14 h-14 rounded-full flex items-center justify-center text-3xl flex-shrink-0"
-                style={{ backgroundColor: c.bg }}
-                aria-hidden="true"
-              >
-                👨‍⚕️
-              </span>
+              <Image
+                src="/images/doctor/DPK_circular.png"
+                alt="Dr. Pradeep Kumar"
+                width={56}
+                height={56}
+                className="w-14 h-14 rounded-full object-cover flex-shrink-0"
+              />
               <div>
                 <p
                   className="font-serif font-bold text-base text-[#1C1917] leading-tight"

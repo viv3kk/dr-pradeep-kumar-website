@@ -179,20 +179,38 @@ export function SpecialtyHero({ specialty }: { specialty: Specialty }) {
               sizes="(min-width: 1024px) 40vw, (min-width: 768px) 42vw, 1px"
               className="object-cover object-center"
             />
-            {/* Left fade — image → peach text background */}
+            {/* Left fade — wide, gradual melt of the image into the text column.
+               A 3-stop gradient keeps the section colour solid at the seam, then
+               eases off so the photo emerges rather than starting on a hard edge. */}
             <div
               aria-hidden="true"
-              className="absolute inset-y-0 left-0 w-20"
+              className="absolute inset-y-0 left-0 w-[55%]"
               style={{
-                background: `linear-gradient(to right, ${c.bgDeep} 0%, transparent 100%)`,
+                background: `linear-gradient(to right, ${c.bgDeep} 0%, ${c.bgDeep}D9 22%, ${c.bgDeep}00 100%)`,
               }}
             />
-            {/* Right fade — image → peach extension beyond container */}
+            {/* Right fade — image → section background beyond the container edge */}
             <div
               aria-hidden="true"
-              className="absolute inset-y-0 right-0 w-24"
+              className="absolute inset-y-0 right-0 w-28"
               style={{
                 background: `linear-gradient(to left, ${c.bgDeep} 0%, transparent 100%)`,
+              }}
+            />
+            {/* Top & bottom fades — soften the horizontal seams so the image
+               dissolves into the background on every side. */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-x-0 top-0 h-28"
+              style={{
+                background: `linear-gradient(to bottom, ${c.bgDeep} 0%, transparent 100%)`,
+              }}
+            />
+            <div
+              aria-hidden="true"
+              className="absolute inset-x-0 bottom-0 h-28"
+              style={{
+                background: `linear-gradient(to top, ${c.bgDeep} 0%, transparent 100%)`,
               }}
             />
           </div>

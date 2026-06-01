@@ -1,0 +1,218 @@
+[
+  {
+    "id": "rev_01",
+    "reviewer_name": "Hemant Singh",
+    "rating": 5,
+    "timeline": "1 year ago",
+    "review_text": "Highly recommend. Great medical doctor, wonderful and warm experience from start to finish. Appreciated taking time to go over the diagnosis clearly and treatment options. Calming experience promoting relaxation and emotional well being.",
+    "category": "Patient Communication",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_02",
+    "reviewer_name": "Nikhil Verma",
+    "rating": 5,
+    "timeline": "2 months ago",
+    "review_text": "Diagnosis, tests, and treatment plan were explained clearly. Very systematic approach.",
+    "category": "Clinical Approach",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_03",
+    "reviewer_name": "Rohit Bansal",
+    "rating": 5,
+    "timeline": "3 months ago",
+    "review_text": "I have been dealing with epilepsy for years. Dr. Kumar adjusted my medication and now my seizures are well controlled.",
+    "category": "Epilepsy Management",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_04",
+    "reviewer_name": "Meenal Jain",
+    "rating": 5,
+    "timeline": "3 months ago",
+    "review_text": "Dr. Kumar listens patiently and explains neurological conditions clearly. Very reassuring approach.",
+    "category": "Patient Empathy",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_05",
+    "reviewer_name": "Poonam Yadav",
+    "rating": 5,
+    "timeline": "3 months ago",
+    "review_text": "Migraine ke liye gaye the… Dr. Kumar ne treatment diya aur ab kaafi relief hai.",
+    "category": "Migraine Treatment",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_06",
+    "reviewer_name": "Nandan Bansal",
+    "rating": 5,
+    "timeline": "2 years ago",
+    "review_text": "Best Doctor for neurology in lucknow. Doctor is professional and well behaved.",
+    "category": "Professionalism",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_07",
+    "reviewer_name": "Kunal Verma",
+    "rating": 5,
+    "timeline": "3 months ago",
+    "review_text": "From consultation to follow up, everything was handled smoothly. Highly recommend for neurological care.",
+    "category": "General Neurology",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_08",
+    "reviewer_name": "Ashok Chaurasiya Chaurasia",
+    "rating": 5,
+    "timeline": "1 year ago",
+    "review_text": "Very good neurologist. A truly commendable experience.",
+    "category": "General Neurology",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_09",
+    "reviewer_name": "Amit Singh",
+    "rating": 5,
+    "timeline": "2 years ago",
+    "review_text": "Helpful behaviour. Calming environment make it a top choice for healthcare.",
+    "category": "Clinic Experience",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_10",
+    "reviewer_name": "Pappu Upendra",
+    "rating": 5,
+    "timeline": "2 years ago",
+    "review_text": "Excellent. Approach truly made a difference.",
+    "category": "Clinical Outcomes",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_11",
+    "reviewer_name": "Rajendra Kumar Maurya",
+    "rating": 5,
+    "timeline": "5 months ago",
+    "review_text": "He is a very famous and good neurologist in the Lucknow region.",
+    "category": "Reputation",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_12",
+    "reviewer_name": "Moteswari Devi",
+    "rating": 5,
+    "timeline": "6 months ago",
+    "review_text": "I have recovered a lot after consulting him for chronic nerve issues.",
+    "category": "Recovery Track",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_13",
+    "reviewer_name": "Bhimsen Yadav",
+    "rating": 5,
+    "timeline": "9 months ago",
+    "review_text": "Best docter for me, caring patient, very good response.",
+    "category": "Patient Empathy",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_14",
+    "reviewer_name": "S. K. Shukla",
+    "rating": 5,
+    "timeline": "4 months ago",
+    "review_text": "Very deeply knowledgeable regarding complex brain stroke management and emergency guidance.",
+    "category": "Stroke Management",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_15",
+    "reviewer_name": "Anjali Mishra",
+    "rating": 4,
+    "timeline": "6 months ago",
+    "review_text": "Consulted for dementia treatment. The lifestyle management tips and systematic medicines are helpful.",
+    "category": "Dementia Management",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_16",
+    "reviewer_name": "Ravi Prakash",
+    "rating": 5,
+    "timeline": "Recent",
+    "review_text": "Excellent guide for neurorehabilitation. Highly clinical precision.",
+    "category": "Neurorehabilitation",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_17",
+    "reviewer_name": "Vikas Agnihotri",
+    "rating": 5,
+    "timeline": "10 months ago",
+    "review_text": "Great doctor for treatment of severe vertigo and cervical nerve compression.",
+    "category": "Vertigo Treatment",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_18",
+    "reviewer_name": "Jyoti Pal",
+    "rating": 5,
+    "timeline": "2 months ago",
+    "review_text": "Apne family member ko dikhaya tha, behavior and diagnosis dono bohot badhiya hai.",
+    "category": "General Neurology",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_19",
+    "reviewer_name": "Dr. S. C. Verma",
+    "rating": 5,
+    "timeline": "1 year ago",
+    "review_text": "Highly professional colleague with supreme diagnostic abilities in movement disorders.",
+    "category": "Peer Review",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_20",
+    "reviewer_name": "Manish Rastogi",
+    "rating": 4,
+    "timeline": "1 year ago",
+    "review_text": "Satisfied with the paralysis recovery treatment. Hospital lines were long but doctor's explanation was crisp.",
+    "category": "Clinical Outcomes",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_21",
+    "reviewer_name": "Pradeep Kumar S.",
+    "rating": 5,
+    "timeline": "2 years ago",
+    "review_text": "Excellent control over secondary headache issues. Prescribed minimal medication.",
+    "category": "Migraine Treatment",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_22",
+    "reviewer_name": "Renu Tripathi",
+    "rating": 5,
+    "timeline": "8 months ago",
+    "review_text": "Very well mannered and systematic behavior during critical stroke phase handling.",
+    "category": "Stroke Management",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_23",
+    "reviewer_name": "Abhishek Jaiswal",
+    "rating": 5,
+    "timeline": "1 year ago",
+    "review_text": "Superb doctor at Apollomedics. Answered all counter questions calmly.",
+    "category": "Patient Communication",
+    "source_platform": "Google/Aggregator Profile"
+  },
+  {
+    "id": "rev_24",
+    "reviewer_name": "Satendra Srivastava",
+    "rating": 5,
+    "timeline": "1 year ago",
+    "review_text": "Best treatment approach for chronic parkinsonism symptoms in Uttar Pradesh.",
+    "category": "Movement Disorders",
+    "source_platform": "Google/Aggregator Profile"
+  }
+]

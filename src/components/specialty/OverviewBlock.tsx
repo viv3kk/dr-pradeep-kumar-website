@@ -25,7 +25,7 @@ export function OverviewBlock({ specialty }: { specialty: Specialty }) {
         style={{ backgroundColor: `${c.tag}10` }}
       />
 
-      <div className="relative max-w-[860px] mx-auto px-6 md:px-10">
+      <div className="relative max-w-[1120px] mx-auto px-6 md:px-10">
         {/* Section label with accent rule */}
         <div className="flex items-center gap-3 mb-5">
           <span

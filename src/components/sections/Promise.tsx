@@ -1,9 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-const TEAM = [
-  { emoji: "👨‍⚕️", role: "Dr. Pradeep Kumar", sub: "Senior Neurologist" },
+type TeamMember = { role: string; sub: string; emoji?: string; img?: string };
+
+const TEAM: TeamMember[] = [
+  { img: "/images/doctor/DPK_circular.png", role: "Dr. Pradeep Kumar", sub: "Senior Neurologist" },
   { emoji: "🩺", role: "Junior Doctor", sub: "Neurology Support" },
   { emoji: "🏃", role: "Physiotherapist", sub: "Neuro-Rehabilitation" },
   { emoji: "💊", role: "Pharmacist", sub: "Medication Management" },
@@ -95,9 +98,19 @@ export function Promise() {
                          border border-white/20 hover:bg-white/22 transition-colors
                          flex flex-col items-center text-center gap-3"
             >
-              <span className="text-4xl" role="img" aria-label={member.role}>
-                {member.emoji}
-              </span>
+              {member.img ? (
+                <Image
+                  src={member.img}
+                  alt={member.role}
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 rounded-full object-cover ring-2 ring-white/40"
+                />
+              ) : (
+                <span className="text-4xl" role="img" aria-label={member.role}>
+                  {member.emoji}
+                </span>
+              )}
               <div>
                 <p className="text-sm font-bold text-white leading-tight">
                   {member.role}
@@ -113,9 +126,9 @@ export function Promise() {
         {/* Stats row */}
         <div className="reveal mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { value: "93%", label: "Patients recommend" },
-            { value: "4.9★", label: "Average rating" },
-            { value: "25,000+", label: "Lives touched" },
+            { value: "97%", label: "Patients recommend" },
+            { value: "4.8★", label: "Average rating" },
+            { value: "Thousands", label: "Lives touched" },
             { value: "< 7 days", label: "Time to first appt." },
           ].map(({ value, label }) => (
             <div key={label} className="text-center">

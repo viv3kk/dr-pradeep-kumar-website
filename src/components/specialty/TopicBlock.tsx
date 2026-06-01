@@ -29,7 +29,7 @@ export function TopicBlock({ topic, color, index }: Props) {
       }}
       aria-labelledby={`${topic.slug}-heading`}
     >
-      <div className="max-w-[860px] mx-auto px-6 md:px-10">
+      <div className="max-w-[1120px] mx-auto px-6 md:px-10">
         {/* Section number + name */}
         <div className="flex items-baseline gap-4 mb-3">
           <span

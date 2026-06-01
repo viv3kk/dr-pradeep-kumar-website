@@ -8,7 +8,6 @@
 ─────────────────────────────────────────────────────────────── */
 import type { Metadata, Viewport } from "next";
 import { Fraunces, DM_Sans, Noto_Sans_Devanagari } from "next/font/google";
-import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import "./globals.css";
 import { SITE_URL } from "@/lib/seo";
@@ -110,10 +109,13 @@ const jsonLd = {
   ],
   memberOf: [
     { "@type": "Organization", name: "Indian Stroke Association (ISA)" },
+    { "@type": "Organization", name: "Neurosonology Society of India" },
     {
       "@type": "Organization",
       name: "Indian Federation of Neuro Rehabilitation (IFNR)",
     },
+    { "@type": "Organization", name: "World Stroke Organization (WSO)" },
+    { "@type": "Organization", name: "Indian Epilepsy Society" },
   ],
   worksFor: {
     "@type": "Hospital",
@@ -151,8 +153,8 @@ const jsonLd = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "87",
+    ratingValue: "4.8",
+    reviewCount: "32",
     bestRating: "5",
   },
   availableService: [
@@ -201,7 +203,7 @@ export default async function RootLayout({
         className="bg-[var(--color-bg)] text-[var(--color-ink)] antialiased overflow-x-hidden"
         suppressHydrationWarning
       >
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        {children}
       </body>
     </html>
   );

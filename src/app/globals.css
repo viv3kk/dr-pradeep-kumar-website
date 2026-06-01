@@ -149,6 +149,15 @@
   .blob-morph {
     animation: blobMorph 9s ease-in-out infinite;
   }
+
+  /* Vertical marquee (testimonial wall) — content is duplicated 2× so
+     translateY(-50%) loops seamlessly. Duration is set inline per column. */
+  .marquee-col {
+    animation: marqueeUp 50s linear infinite;
+  }
+  .marquee-col-rev {
+    animation: marqueeUp 50s linear infinite reverse;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -179,6 +188,11 @@
 @keyframes gentleSlideUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes marqueeUp {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
 }
 
 /* ═══════════════════════════════════════════════════════════

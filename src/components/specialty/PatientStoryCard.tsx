@@ -25,7 +25,7 @@ export function PatientStoryCard({ story, color }: Props) {
       className="py-20 md:py-24 bg-white"
       aria-labelledby="story-heading"
     >
-      <div className="max-w-[760px] mx-auto px-6 md:px-10">
+      <div className="max-w-[1120px] mx-auto px-6 md:px-10">
         <h2
           id="story-heading"
           className={`font-serif text-[clamp(26px,3.6vw,38px)] font-bold text-[#1C1917] leading-tight mb-10 text-center ${

@@ -28,7 +28,7 @@ export function SpecialtyFAQ({ faqs, color }: Props) {
       className="py-20 md:py-24 bg-white"
       aria-labelledby="faq-heading"
     >
-      <div className="max-w-[760px] mx-auto px-6 md:px-10">
+      <div className="max-w-[1120px] mx-auto px-6 md:px-10">
         <h2
           id="faq-heading"
           className={`font-serif text-[clamp(26px,3.8vw,40px)] font-bold text-[#1C1917] leading-tight mb-10 text-center ${

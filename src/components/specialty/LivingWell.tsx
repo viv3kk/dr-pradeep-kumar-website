@@ -26,7 +26,7 @@ export function LivingWell({ tips, color }: Props) {
       className="py-20 md:py-24 bg-[#FAF8F5]"
       aria-labelledby="living-well-heading"
     >
-      <div className="max-w-[860px] mx-auto px-6 md:px-10">
+      <div className="max-w-[1120px] mx-auto px-6 md:px-10">
         <div className="flex items-center gap-2.5 mb-3 justify-center">
           <Sparkles size={18} style={{ color: c.tag }} aria-hidden="true" />
           <span

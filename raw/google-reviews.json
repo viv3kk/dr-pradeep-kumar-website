@@ -1,0 +1,289 @@
+{
+  "doctor_name": "Dr. Pradeep Kumar",
+  "specialty": "Neurologist",
+  "average_rating": 4.8,
+  "total_reviews": 32,
+  "profile_link": "https://www.google.com/search?q=dr+pradeep+kumar+neurologist",
+  "reviews": [
+    {
+      "reviewer_name": "Gopi Krishan Agrahari",
+      "rating": 5,
+      "date": "4 months ago",
+      "review_text": "I am incredibly grateful to Dr. Pradeep Kumar & his team for the exceptional neurological care I received. Dr. Pradeep is not only highly skilled but also remarkably humble and polite. He takes the time to listen and treats his patients with dignity.",
+      "owner_response": null
+    },
+    {
+      "reviewer_name": "amit kumar",
+      "rating": 1,
+      "date": "7 months ago",
+      "review_text": "I’m deeply disappointed with the treatment approach of Dr. Pradeep Kumar (DM Neurology), Apollo Mediclinic, Lucknow. My father was advised to stop his ongoing medications to maintain his sodium levels near normal. However, when his sodium levels fell again, the response was not satisfactory.",
+      "owner_response": "Thank you for the review, amit kumar! Your satisfaction is our top priority. Please contact us so we can work to address your concerns."
+    },
+    {
+      "reviewer_name": "ahinsa singh",
+      "rating": 5,
+      "date": "9 months ago",
+      "review_text": "I had an excellent experience with Dr. Pradeep sir.one of the most knowledgeable and compassionate neurologists I've ever consulted. From the moment I entered the clinic, I felt heard, respected, and truly cared for.",
+      "owner_response": "Thank you so much for your kind words, ahinsa singh! We truly appreciate you taking the time to share your experience with us."
+    },
+    {
+      "reviewer_name": "Yogesh Yadav",
+      "rating": 5,
+      "date": "10 months ago",
+      "review_text": "Dr.Pradeep Kumar Gupta is best neurologist in lucknow. And his assistant mr.rahul is also very nice and very helpful and kind .",
+      "owner_response": "Thank you so much for your kind words, Yogesh Yadav!"
+    },
+    {
+      "reviewer_name": "Anmol Singh",
+      "rating": 5,
+      "date": "10 months ago",
+      "review_text": "Dr Pradeep treated my grandfather for ischemic stroke gave best t/t options and care possible.In opd rahul (his opd attendant) was also helpful",
+      "owner_response": "Thank you so much for your kind words, Anmol Singh!"
+    },
+    {
+      "reviewer_name": "Abhilash Mishra",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "World’s best neurologist doctor Pradeep kumar is great and his co ordinator Mr Shubham also kind",
+      "owner_response": "Thank you so much for your kind words, Abhilash Mishra!"
+    },
+    {
+      "reviewer_name": "Manju Dixit",
+      "rating": 5,
+      "date": "10 months ago",
+      "review_text": "The one of the best neurologist in lucknow and staff is also have a good behaviour",
+      "owner_response": "Thank you so much for your kind words, Manju Dixit!"
+    },
+    {
+      "reviewer_name": "Vandana Chaturvedi",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Dr.Pradeep Kumar is the best for neuro related problems...my mother in law is recovering and getting better everyday",
+      "owner_response": "Thank you so much for your kind words, Vandana Chaturvedi!"
+    },
+    {
+      "reviewer_name": "Dr Rahul Srivastava",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Dr Pradeep is best in neurology i highly recommend him thanks to apollomedics",
+      "owner_response": "I’m so pleased to hear that you had a positive experience with our services."
+    },
+    {
+      "reviewer_name": "Ajai Shukla",
+      "rating": 5,
+      "date": "9 months ago",
+      "review_text": "Best neuro physician in Lucknow",
+      "owner_response": "Thank you so much for your kind words, Ajai Shukla!"
+    },
+    {
+      "reviewer_name": "Nandan Bansal",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Best Doctor for neurology in lucknow",
+      "owner_response": "It’s our mission to ensure that each patient feels heard, understood, and well cared for."
+    },
+    {
+      "reviewer_name": "Ashok chaurasiya Chaurasia",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Very good neurologist",
+      "owner_response": "Thank you so much for your kind words, Ashok chaurasiya Chaurasia!"
+    },
+    {
+      "reviewer_name": "pappu upendra",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Excellent",
+      "owner_response": "Thank you for rating us."
+    },
+    {
+      "reviewer_name": "Amit Singh",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Helpful behaviour",
+      "owner_response": "Hi Amit Singh, I’m so pleased to hear that you had a positive experience."
+    },
+    {
+      "reviewer_name": "Kitto Singh",
+      "rating": 5,
+      "date": "a month ago",
+      "review_text": "Very helpful and care full fir patient thanku so much sir",
+      "owner_response": null
+    },
+    {
+      "reviewer_name": "Durgesh Tiwari",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "My wife's legs suddenly stopped working, and all the doctors referred her to her with GBS syndrome. At that time, Dr. Pradeep, who worked at Medanta, immediately began treatment and got her back on her feet.",
+      "owner_response": "It’s our mission to ensure that each patient feels heard, understood, and well cared for."
+    },
+    {
+      "reviewer_name": "Shimla Singh",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Best doctor in Lucknow I am very grateful to the doctor. I have felt very relieved since I saw him.",
+      "owner_response": "Hi Shimla Singh, I’m so pleased to hear that you had a positive experience."
+    },
+    {
+      "reviewer_name": "M R Shukla",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Doctor Sahib has a very good nature, he gives full time to the patient and listens to everything.",
+      "owner_response": "Hi M R Shukla, your feedback confirms we are on the right path."
+    },
+    {
+      "reviewer_name": "Shitala Prasad Gupta",
+      "rating": 5,
+      "date": "8 months ago",
+      "review_text": "Rating only - no text provided",
+      "owner_response": "Thank you so much for your kind review, Shitala Prasad Gupta!"
+    },
+    {
+      "reviewer_name": "alok mishra",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Rating only - no text provided",
+      "owner_response": "Thank you so much for your kind review, alok mishra!"
+    },
+    {
+      "reviewer_name": "Parnika Rai",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Rating only - no text provided",
+      "owner_response": "Thank you."
+    },
+    {
+      "reviewer_name": "Hasmukh Kumar",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Rating only - no text provided",
+      "owner_response": "Hi Hasmukh Kumar, thank you for rating us."
+    },
+    {
+      "reviewer_name": "Krish",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Rating only - no text provided",
+      "owner_response": "Thank you so much for your kind review, Krish!"
+    },
+    {
+      "reviewer_name": "KAMINI SINGH",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Rating only - no text provided",
+      "owner_response": "Thank you for rating us."
+    },
+    {
+      "reviewer_name": "Vivek Prakash",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "I highly recommend Dr. Pradeep Kumar. He is truly the best neurologist I have come across. He takes the time to explain everything clearly and never rushes the conversation. He treated my father for a brain stroke and its related complications with such care and expertise that we always felt we were in the best hands. A human being with a pure heart.",
+      "owner_response": null
+    },
+    {
+      "reviewer_name": "Devansh Verma",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Dr. Pradeep Kumar, neurologist at Apollo hospital, provided a great consultation experience. He listens to every problem and then provides the best solution available. Never rushes and satisfies the patient.",
+      "owner_response": null
+    },
+    {
+      "reviewer_name": "Ram Kishor",
+      "rating": 5,
+      "date": "9 months ago",
+      "review_text": "Dr. Pradeep Kumar is the best neurologist in Lucknow. Best hospital in Lucknow. Staff is helpful.",
+      "owner_response": null
+    },
+    {
+      "reviewer_name": "Avanisha Shakya",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Dr Pradeep sir is a great and very kind-hearted doctor. My daughter had been suffering with epilepsy for 8 years and no doctor could stop her seizures, but now with Dr Pradeep sir's treatment she is getting well.",
+      "owner_response": null
+    },
+    {
+      "reviewer_name": "Umesh Dubey",
+      "rating": 5,
+      "date": "2 years ago",
+      "review_text": "Dr. Pradeep Kumar and his staff are one and only. We salute them a hundred times.",
+      "owner_response": "Dear Umesh, we really appreciate your kind words of appreciation towards Dr. Pradeep Kumar. Wishing you health and happiness."
+    },
+    {
+      "reviewer_name": "ahinsa singh",
+      "rating": 5,
+      "date": "3 years ago",
+      "review_text": "Best doctor for neuro. Many doctors suggested surgery, but when I visited sir at Medanta he gave me only small medicines and an exercise called cat-and-camel. From that day to this day I haven't felt the pain even once.",
+      "owner_response": null
+    },
+    {
+      "reviewer_name": "Rajendra Gupta",
+      "rating": 5,
+      "date": "2 years ago",
+      "review_text": "Dr. Pradeep Kumar sir has a very polite and straightforward discussion with his patients and provides sufficient time to clear every doubt about your problem. His coordinators Vishal and Priyanka have very good behaviour — a good experience.",
+      "owner_response": null
+    },
+    {
+      "reviewer_name": "Mukul Manon",
+      "rating": 5,
+      "date": "2 years ago",
+      "review_text": "Dr. Pradeep Kumar sir has a very polite and straightforward discussion with his patients and provides sufficient time to clear every doubt about your problem.",
+      "owner_response": null
+    },
+    {
+      "reviewer_name": "Aradhna Nigam",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Dr Pradeep is best in neurology. Thank you Apollo.",
+      "owner_response": null
+    },
+    {
+      "reviewer_name": "Shanal Agrawal",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Pradeep sir is not only a doctor but also a second name for God.",
+      "owner_response": null
+    },
+    {
+      "reviewer_name": "faizan ansari",
+      "rating": 5,
+      "date": "2 years ago",
+      "review_text": "Amazing experience with Dr. Pradeep — very skilled and very kind. Thank you Doctor.",
+      "owner_response": null
+    },
+    {
+      "reviewer_name": "VIVEK RANJAN SRIVASTAVA",
+      "rating": 5,
+      "date": "2 years ago",
+      "review_text": "I am satisfied with the treatment given to my father in hospital and post hospitalization.",
+      "owner_response": null
+    },
+    {
+      "reviewer_name": "Amit Dube",
+      "rating": 5,
+      "date": "2 years ago",
+      "review_text": "Knowledgeable, with excellent behaviour.",
+      "owner_response": null
+    },
+    {
+      "reviewer_name": "Dr Ashish Gupta",
+      "rating": 5,
+      "date": "2 years ago",
+      "review_text": "Excellent neurologist.",
+      "owner_response": null
+    },
+    {
+      "reviewer_name": "GORAKH JAISWAL",
+      "rating": 5,
+      "date": "2 years ago",
+      "review_text": "Very good doctor.",
+      "owner_response": "Dear Gorakh, we appreciate your kind words of gratitude towards Dr. Pradeep Kumar. Wishing you health and happiness. Warm Regards, Team Medanta."
+    },
+    {
+      "reviewer_name": "Durgesh Tiwari",
+      "rating": 5,
+      "date": "a year ago",
+      "review_text": "Top doctor.",
+      "owner_response": null
+    }
+  ]
+}

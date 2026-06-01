@@ -14,6 +14,7 @@ import { DOCTOR } from "@/lib/doctor-data";
 import { SPECIALTIES, t as tBilingual } from "@/lib/specialties-data";
 import { COLORS } from "@/lib/specialty-colors";
 import { SpecialtyIcon } from "@/components/specialty/SpecialtyIcon";
+import { Logo } from "@/components/layout/Logo";
 import { cn } from "@/lib/utils";
 import { usePathname as useRawPathname } from "next/navigation";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
@@ -156,25 +157,10 @@ export function Navbar() {
           <Link
             href="/"
             onClick={() => setOpen(false)}
-            className="flex items-center gap-2 flex-shrink-0 mr-auto min-w-0"
+            className="flex items-center flex-shrink-0 mr-auto min-w-0"
             aria-label="Dr. Pradeep Kumar Neurology — Home"
           >
-            <span
-              className="w-2.5 h-2.5 rounded-full bg-[#E8714A] breathe flex-shrink-0"
-              aria-hidden="true"
-            />
-            <span
-              className={`font-serif text-[17px] sm:text-[19px] md:text-[20px] font-bold text-[#1C1917] leading-none truncate ${
-                isHi ? "font-hi" : ""
-              }`}
-              style={{
-                fontFamily: isHi
-                  ? "var(--font-noto-hi)"
-                  : "var(--font-fraunces, 'Fraunces', serif)",
-              }}
-            >
-              Dr. Pradeep Kumar
-            </span>
+            <Logo isHi={isHi} markSize={52} hoverPreview />
           </Link>
 
           {/* ── Desktop links (≥ lg) ──────────────────────────── */}
@@ -214,11 +200,11 @@ export function Navbar() {
               </button>
               {specOpen && (
                 <div
-                  className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[340px] bg-white rounded-2xl border border-[#E7E5E4] shadow-[0_12px_40px_rgba(28,25,23,0.12)] p-2 z-50"
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[600px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl border border-[#E7E5E4] shadow-[0_12px_40px_rgba(28,25,23,0.12)] p-2 z-50"
                   onMouseEnter={onSpecEnter}
                   onMouseLeave={onSpecLeave}
                 >
-                  <ul role="list" className="space-y-0.5">
+                  <ul role="list" className="grid grid-cols-2 gap-0.5">
                     {SPECIALTIES.map((s) => {
                       const c = COLORS[s.color];
                       return (
@@ -240,11 +226,11 @@ export function Navbar() {
                                 color={c.tag}
                               />
                             </span>
-                            <span className="flex-1 text-sm font-medium text-[#1C1917]">
+                            <span className="flex-1 text-sm font-medium text-[#1C1917] leading-tight">
                               {tBilingual(s.shortName, locale)}
                             </span>
                             {s.comingSoon && (
-                              <span className="text-[10px] text-[#A8A29E] font-semibold uppercase tracking-widest">
+                              <span className="text-[10px] text-[#A8A29E] font-semibold uppercase tracking-widest flex-shrink-0">
                                 {isHi ? "जल्द" : "Soon"}
                               </span>
                             )}
@@ -252,18 +238,16 @@ export function Navbar() {
                         </li>
                       );
                     })}
-                    <li>
-                      <Link
-                        href="/specialties"
-                        onClick={() => setSpecOpen(false)}
-                        className={`block px-3 py-2.5 rounded-lg text-sm font-semibold text-[#E8714A] hover:bg-[#FEF0EB] transition-colors border-t border-[#E7E5E4] mt-1 pt-3 ${
-                          isHi ? "font-hi" : ""
-                        }`}
-                      >
-                        {tNav("allSpecialties")} →
-                      </Link>
-                    </li>
                   </ul>
+                  <Link
+                    href="/specialties"
+                    onClick={() => setSpecOpen(false)}
+                    className={`block mt-1 pt-3 pb-1 text-sm font-semibold text-center text-[#E8714A] hover:text-[#D45E38] transition-colors border-t border-[#E7E5E4] ${
+                      isHi ? "font-hi" : ""
+                    }`}
+                  >
+                    {tNav("allSpecialties")} →
+                  </Link>
                 </div>
               )}
             </li>

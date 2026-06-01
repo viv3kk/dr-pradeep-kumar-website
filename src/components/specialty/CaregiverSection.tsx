@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Heart } from "lucide-react";
 import { t, type Bilingual } from "@/lib/specialties-data";
 import type { Locale } from "@/i18n/routing";
+import { RichText } from "./RichText";
 
 interface Props {
   content: Bilingual;
@@ -18,7 +19,7 @@ export function CaregiverSection({ content }: Props) {
 
   return (
     <section className="py-20 md:py-24 bg-[#FEF0EB]" aria-labelledby="caregivers-heading">
-      <div className="max-w-[760px] mx-auto px-6 md:px-10">
+      <div className="max-w-[1120px] mx-auto px-6 md:px-10">
         <div className="flex items-center gap-3 mb-5">
           <span
             className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white"
@@ -45,13 +46,12 @@ export function CaregiverSection({ content }: Props) {
           {tPage("forCaregivers")}
         </h2>
 
-        <p
-          className={`text-[17px] md:text-[18px] leading-[1.85] text-[#3F3A36] ${
+        <RichText
+          text={t(content, locale)}
+          paragraphClassName={`text-[17px] md:text-[18px] leading-[1.85] text-[#3F3A36] ${
             isHi ? "font-hi lang-hi" : ""
           }`}
-        >
-          {t(content, locale)}
-        </p>
+        />
       </div>
     </section>
   );

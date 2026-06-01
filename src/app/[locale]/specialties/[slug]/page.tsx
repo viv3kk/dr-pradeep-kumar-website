@@ -17,8 +17,12 @@ import { SpecialtyFAQ } from "@/components/specialty/SpecialtyFAQ";
 import { SpecialtyMidCTA } from "@/components/specialty/SpecialtyMidCTA";
 import { FloatingBookButton } from "@/components/specialty/FloatingBookButton";
 import { ComingSoonBanner } from "@/components/specialty/ComingSoonBanner";
+import { EmergencyBanner } from "@/components/specialty/EmergencyBanner";
+import { MythsFacts } from "@/components/specialty/MythsFacts";
+import { FirstConsultation } from "@/components/specialty/FirstConsultation";
+import { StigmaCallout } from "@/components/specialty/StigmaCallout";
 
-import { SPECIALTIES, getSpecialty, t } from "@/lib/specialties-data";
+import { SPECIALTIES, getSpecialty, loadSpecialtyData, t } from "@/lib/specialties-data";
 import { routing } from "@/i18n/routing";
 import type { Locale } from "@/i18n/routing";
 import { buildLocaleMetadata, localeUrl, SITE_URL } from "@/lib/seo";
@@ -65,7 +69,7 @@ export default async function SpecialtyPage({
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
-  const specialty = getSpecialty(slug);
+  const specialty = await loadSpecialtyData(slug);
   if (!specialty) {
     notFound();
   }
@@ -136,7 +140,17 @@ export default async function SpecialtyPage({
           <ComingSoonBanner />
         ) : (
           <>
+            {/* Emergency banner — ER conditions only (stroke, neuro infections),
+                elevated directly after the hero. */}
+            <EmergencyBanner content={s.emergencyBanner} />
+
             <OverviewBlock specialty={s} />
+
+            {/* Tier 1 (caregiver-driven): caregiver section is ELEVATED —
+                it sits before the condition blocks. */}
+            {s.tier === 1 && (
+              <CaregiverSection content={s.caregiverSection} />
+            )}
 
             {/* Each topic gets the full empathy framework */}
             {s.topics.map((topic, idx) => (
@@ -151,7 +165,18 @@ export default async function SpecialtyPage({
             {/* Soft mid-page CTA after the clinical content */}
             <SpecialtyMidCTA color={s.color} />
 
-            <CaregiverSection content={s.caregiverSection} />
+            <MythsFacts myths={s.myths} color={s.color} />
+
+            <FirstConsultation content={s.firstConsultation} color={s.color} />
+
+            {/* Stigma callout — epilepsy, dementia, Parkinson's. */}
+            <StigmaCallout content={s.stigmaCallout} color={s.color} />
+
+            {/* Tier 2/3 (patient-driven): caregiver section is in its
+                STANDARD position, after the condition blocks. */}
+            {s.tier !== 1 && (
+              <CaregiverSection content={s.caregiverSection} />
+            )}
 
             <DrKumarsApproach
               content={s.drKumarsApproach}

@@ -160,7 +160,7 @@ export function Hero() {
                            border border-[#F5C4B3] rounded-full px-5 py-2
                            text-xs font-semibold tracking-widest uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-[#E8714A] breathe" aria-hidden="true"/>
-            Neurologist · Lucknow &amp; Kanpur · 11+ Years
+            Neurologist · Lucknow &amp; Kanpur · 15+ Years
           </span>
         </div>
 
@@ -228,7 +228,7 @@ export function Hero() {
             ))}
           </div>
           <div className="flex items-center gap-1.5">
-            <div className="flex" aria-label="4.9 star rating">
+            <div className="flex" aria-label="4.8 star rating">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} size={12} className="fill-[#F59E0B] text-[#F59E0B]"/>
               ))}

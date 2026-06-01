@@ -7,12 +7,12 @@ export const DOCTOR = {
   designation: "Director — Neurology, Paras Health Kanpur",
   tagline: "Your brain health deserves gentle, expert care.",
   subTagline:
-    "With over a decade of experience, Dr. Pradeep Kumar offers compassionate, evidence-based neurology care for patients across Lucknow & Kanpur — in a language you'll truly understand.",
-  experience: "11+",
-  patients: "25,000+",
-  rating: "4.9",
-  ratingCount: "87+",
-  recommendationScore: "93%",
+    "With 15+ years of clinical experience, Dr. Pradeep Kumar offers compassionate, evidence-based neurology care for patients across Lucknow & Kanpur — in a language you'll truly understand.",
+  experience: "15+",
+  patients: "Thousands",
+  rating: "4.8",
+  ratingCount: "32",
+  recommendationScore: "97%",
   languages: ["Hindi", "English"],
   registrationNo: "UPMC-61202",
 
@@ -22,30 +22,31 @@ export const DOCTOR = {
       degree: "MBBS",
       institution: "Motilal Nehru Medical College (MLNMC)",
       location: "Prayagraj, UP",
-      year: "",
+      year: "2005–2011",
     },
     {
       degree: "MD — General Medicine",
       institution: "King George's Medical University (KGMU)",
       location: "Lucknow, UP",
-      year: "",
+      year: "2013–2016",
     },
     {
       degree: "DM — Neurology",
       institution: "Dr. Ram Manohar Lohia Institute of Medical Sciences (RMLIMS)",
       location: "Lucknow, UP",
-      year: "",
+      year: "2017–2020",
     },
   ],
 
   // ── Career Timeline ─────────────────────────────────────────────────────────
   timeline: [
-    { year: "2009", title: "MBBS Completed", body: "Motilal Nehru Medical College (MLNMC), Prayagraj" },
-    { year: "2016", title: "MD — General Medicine", body: "Specialised in Internal Medicine, KGMU Lucknow" },
-    { year: "2020", title: "DM — Neurology", body: "Advanced Neurology training, RMLIMS Lucknow" },
-    { year: "2021–2024", title: "Consultant Neurologist, Medanta", body: "Department of Neurology, Lucknow" },
-    { year: "2024–2026", title: "Associate Director, Apollomedics", body: "Apollomedics Super Speciality Hospital, Lucknow" },
-    { year: "2026 – Till Date", title: "Director — Neurology, Paras Health Kanpur", body: "Extended practice to serve patients in Kanpur region" },
+    { year: "2005–2011", title: "MBBS", body: "Motilal Nehru Medical College (MLNMC), Prayagraj" },
+    { year: "2013–2016", title: "MD — General Medicine", body: "King George's Medical University (KGMU), Lucknow" },
+    { year: "2017", title: "Consultant — Internal Medicine", body: "Shri Harihar Hospital, Kullu, Himachal Pradesh" },
+    { year: "2017–2020", title: "DM — Neurology", body: "Advanced Neurology training, RMLIMS Lucknow" },
+    { year: "2021–2024", title: "Consultant Neurologist & Headache Clinic In-Charge", body: "Medanta, Lucknow" },
+    { year: "2024–2026", title: "Associate Director & Stroke Lead", body: "Neurosciences, Apollomedics, Lucknow" },
+    { year: "2026 – Present", title: "Director — Neurology", body: "Paras Health, Kanpur" },
   ],
 
   // ── Affiliations ────────────────────────────────────────────────────────────
@@ -58,9 +59,13 @@ export const DOCTOR = {
 
   // ── Professional Memberships ────────────────────────────────────────────────
   memberships: [
-    "Life Member — Indian Stroke Association (ISA)",
-    "Life Member — Indian Federation of Neuro Rehabilitation (IFNR)",
-    "Platform & Poster Presentation — INSC 2023 & 2025",
+    "Indian Stroke Association (ISA)",
+    "Neurosonology Society of India",
+    "Indian Federation of Neuro Rehabilitation (IFNR)",
+    "World Stroke Organization (WSO)",
+    "Indian Epilepsy Society",
+    "Joint Secretary — Indian National Stroke Conference 2025",
+    "Founder Member & Co-Treasurer — Stroke & Education Society",
   ],
 
   // ── Primary Clinic (kept for backward-compat — points to Paras Kanpur) ──────
@@ -94,8 +99,8 @@ export const DOCTOR = {
       pin: "226010",
       phone: "+91-9793440057",
       days: ["Wed"],
-      daysSummary: "Wed: morning & evening",
-      timings: "Wednesday morning & evening · call to confirm",
+      daysSummary: "Wednesday",
+      timings: "Morning & evening · call to confirm",
       mapSearchQuery: "Vijyant Khand Gomti Nagar Lucknow",
       mapEmbed:
         "https://maps.google.com/maps?q=Vijyant+Khand+Gomti+Nagar+Lucknow&output=embed",
@@ -114,7 +119,7 @@ export const DOCTOR = {
       phone: "+91-9793440057",
       days: ["Mon", "Tue", "Thu", "Fri", "Sat"],
       daysSummary: "Mon, Tue, Thu, Fri, Sat",
-      timings: "Mon · Tue · Thu · Fri · Sat",
+      timings: "9:00 AM – 5:00 PM",
       mapSearchQuery: "Paras Health Kanpur",
       mapEmbed:
         "https://maps.google.com/maps?q=Paras+Health+Kanpur&output=embed",
@@ -137,7 +142,7 @@ export const DOCTOR = {
   fees: {
     inPerson: 1000,
     currency: "₹",
-    followUp: 500,
+    followUp: 1000,
   },
 
   // ── Specialisations ─────────────────────────────────────────────────────────
@@ -164,7 +169,7 @@ export const DOCTOR = {
       color: "coral",
       tagline: "Freedom from pain starts here.",
       description:
-        "Personalised treatment plans including CGRP inhibitors, Botox therapy, trigger identification, and lifestyle modifications for chronic migraine, cluster, and tension headaches.",
+        "Modern preventive care for chronic migraine, cluster, and tension headaches.",
       conditions: ["Chronic Migraine", "Cluster Headache", "Tension Headache", "Secondary Headache"],
     },
     {
@@ -174,7 +179,7 @@ export const DOCTOR = {
       color: "teal",
       tagline: "Stop the world from spinning.",
       description:
-        "Expert diagnosis and management of vestibular disorders including BPPV repositioning manoeuvres, vestibular rehabilitation, and treatment of central vertigo causes.",
+        "In-clinic BPPV manoeuvres and vestibular rehab to stop the spinning.",
       conditions: ["BPPV", "Vestibular Neuritis", "Ménière's Disease", "Central Vertigo"],
     },
     {
@@ -184,7 +189,7 @@ export const DOCTOR = {
       color: "teal",
       tagline: "Take back control of your life.",
       description:
-        "Advanced EEG monitoring, video-EEG telemetry, anti-epileptic drug optimisation, and surgical candidacy evaluation for drug-resistant epilepsy.",
+        "EEG-guided diagnosis and drug optimisation, even for drug-resistant epilepsy.",
       conditions: ["Focal Epilepsy", "Generalised Epilepsy", "Status Epilepticus", "Febrile Seizures"],
     },
     {
@@ -194,7 +199,7 @@ export const DOCTOR = {
       color: "navy",
       tagline: "Every minute counts — we act fast.",
       description:
-        "Rapid stroke assessment, IV thrombolysis (clot-busting therapy), mechanical thrombectomy coordination, and comprehensive secondary prevention planning.",
+        "Rapid assessment, IV thrombolysis, and secondary-prevention planning.",
       conditions: ["Acute Stroke", "TIA", "Haemorrhagic Stroke", "Stroke Rehabilitation"],
     },
     {
@@ -204,7 +209,7 @@ export const DOCTOR = {
       color: "gold",
       tagline: "Living well, moving better.",
       description:
-        "Movement disorder specialist care: dopaminergic therapy optimisation, physiotherapy and neuro-rehabilitation coordination, and comprehensive caregiver support.",
+        "Medication tuning, rehab, and caregiver support to keep you moving.",
       conditions: ["Parkinson's Disease", "Essential Tremor", "Dystonia", "Ataxia"],
     },
     {
@@ -214,7 +219,7 @@ export const DOCTOR = {
       color: "sky",
       tagline: "Clarity through careful assessment.",
       description:
-        "Cognitive screening, neuropsychological evaluation, Alzheimer's diagnosis, and comprehensive memory management programmes for patients and families.",
+        "Cognitive testing, accurate diagnosis, and memory-care plans for families.",
       conditions: ["Alzheimer's Disease", "Vascular Dementia", "MCI", "Frontotemporal Dementia"],
     },
     {
@@ -224,7 +229,7 @@ export const DOCTOR = {
       color: "purple",
       tagline: "Relief from nerve pain starts here.",
       description:
-        "Evaluation and treatment of peripheral nerve disorders including diabetic neuropathy, hereditary neuropathies, and toxic or nutritional causes with nerve conduction studies.",
+        "Nerve-conduction testing and relief for diabetic and other neuropathies.",
       conditions: ["Diabetic Neuropathy", "Peripheral Neuropathy", "Hereditary Neuropathy", "Toxic Neuropathy"],
     },
     {
@@ -234,7 +239,7 @@ export const DOCTOR = {
       color: "navy",
       tagline: "Protecting the nervous system.",
       description:
-        "Diagnosis and management of infections affecting the brain and nervous system, including meningitis, encephalitis, neurocysticercosis, and tropical neurological diseases.",
+        "Diagnosis and treatment of meningitis, encephalitis, and brain infections.",
       conditions: ["Bacterial Meningitis", "Viral Encephalitis", "Neurocysticercosis", "Tubercular Meningitis"],
     },
     {
@@ -244,7 +249,7 @@ export const DOCTOR = {
       color: "gold",
       tagline: "Recovery, one step at a time.",
       description:
-        "Structured rehabilitation programmes for patients recovering from stroke, TBI, Parkinson's, and other neurological conditions — integrating physiotherapy, speech therapy, and occupational therapy.",
+        "Physiotherapy, speech, and occupational therapy to rebuild after injury.",
       conditions: ["Post-Stroke Rehab", "TBI Recovery", "Spasticity Management", "Gait Disorders"],
     },
     {
@@ -254,7 +259,7 @@ export const DOCTOR = {
       color: "sky",
       tagline: "Back to living pain-free.",
       description:
-        "Neurological evaluation of chronic and acute back pain including disc disease, radiculopathy, and spinal cord involvement, with targeted management and rehabilitation guidance.",
+        "Neurological work-up for disc disease, sciatica, and chronic back pain.",
       conditions: ["Lumbar Disc Disease", "Radiculopathy", "Sciatica", "Spinal Stenosis"],
     },
     {
@@ -264,7 +269,7 @@ export const DOCTOR = {
       color: "coral",
       tagline: "Ease the burden on your neck.",
       description:
-        "Expert assessment of cervical spondylosis, myelopathy, and neck-related neurological symptoms with targeted medical and rehabilitative management.",
+        "Targeted care for cervical spondylosis and nerve-related neck pain.",
       conditions: ["Cervical Spondylosis", "Cervical Myelopathy", "Cervical Radiculopathy", "Whiplash"],
     },
     {
@@ -274,7 +279,7 @@ export const DOCTOR = {
       color: "purple",
       tagline: "Restoring strength and function.",
       description:
-        "Comprehensive management of neuromuscular junction disorders with immunotherapy, cholinesterase inhibitors, plasmapheresis coordination, and long-term monitoring.",
+        "Immunotherapy and long-term management for myasthenia gravis.",
       conditions: ["Myasthenia Gravis", "Lambert-Eaton Syndrome", "Ocular MG", "Generalised MG"],
     },
     {
@@ -284,7 +289,7 @@ export const DOCTOR = {
       color: "navy",
       tagline: "Expert care from diagnosis to recovery.",
       description:
-        "Rapid diagnosis and management of acute inflammatory polyneuropathy including IVIG therapy, plasmapheresis, respiratory monitoring, and rehabilitation coordination.",
+        "Rapid IVIG and plasmapheresis care for Guillain-Barré syndrome.",
       conditions: ["Guillain-Barré Syndrome", "CIDP", "Miller Fisher Syndrome", "Acute Polyneuropathy"],
     },
   ],
@@ -314,8 +319,13 @@ export const DOCTOR = {
 
   // ── Research & Publications ─────────────────────────────────────────────────
   research: [
-    "Workshop presentations on Stroke Thrombolysis protocols",
-    "Platform & Poster Presentation — INSC 2023 & 2025",
+    "Conducted IV Thrombolysis & Stroke Management Workshops — National Stroke Conference 2025",
+    "Regular training of stroke-management teams at RMLIMS, Medanta & Apollo Hospitals, Lucknow",
+    "Organised Migraine Management Workshops & a dedicated Migraine Clinic",
+    "Epilepsy Awareness Workshop (Nov 2025) & Epilepsy Walkathon — International Epilepsy Day 2026",
+    "World Parkinson's Day Workshop & Walkathon with PDMS, Mumbai (2025–2026)",
+    "Platform & Poster Presentations — INSC 2023 & 2025",
+    "Competent-authority member, Transplant Committee — Apollomedics, Lucknow",
   ],
 
   // ── Testimonials ────────────────────────────────────────────────────────────
@@ -396,9 +406,9 @@ export const DOCTOR = {
 
   // ── Stats for display ───────────────────────────────────────────────────────
   stats: [
-    { value: "11+", label: "Years of Experience" },
-    { value: "25,000+", label: "Patients Treated" },
-    { value: "93%", label: "Recommendation Score" },
+    { value: "15+", label: "Years of Experience" },
+    { value: "Thousands", label: "Patients Treated" },
+    { value: "97%", label: "Recommendation Score" },
     { value: "< 7", label: "Days to First Appt." },
   ],
 

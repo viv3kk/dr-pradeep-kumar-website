@@ -91,7 +91,7 @@ export function FAQ() {
     <section
       id="faq"
       ref={sectionRef}
-      className="py-24 md:py-32 bg-[#FAF8F5]"
+      className="pt-16 md:pt-20 pb-24 md:pb-32 bg-[#FAF8F5]"
       aria-label="Frequently asked questions"
     >
       <div className="max-w-[760px] mx-auto px-6 md:px-10">
