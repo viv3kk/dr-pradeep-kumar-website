@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/",
     "/specialties",
     ...SPECIALTIES.map((s) => `/specialties/${s.slug}`),
+    "/reviews",
+    "/success-stories",
   ];
 
   const now = new Date();

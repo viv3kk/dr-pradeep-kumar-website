@@ -252,6 +252,15 @@ export function Navbar() {
               )}
             </li>
 
+            <li>
+              <Link
+                href="/success-stories"
+                className={navLinkCls(isHi)}
+              >
+                {isHi ? "मरीज़ों की कहानियाँ" : "Success Stories"}
+              </Link>
+            </li>
+
             {DESKTOP_NAV.map((item) => (
               <li key={item.sectionId}>
                 <button
@@ -427,6 +436,21 @@ export function Navbar() {
               </ul>
             )}
           </div>
+
+          <Link
+            href="/success-stories"
+            onClick={() => setOpen(false)}
+            className={`block w-full text-left font-serif text-lg font-semibold text-[#1C1917] py-4 border-b border-[#E7E5E4] hover:text-[#E8714A] transition-colors cursor-pointer ${
+              isHi ? "font-hi" : ""
+            }`}
+            style={{
+              fontFamily: isHi
+                ? "var(--font-noto-hi)"
+                : "var(--font-fraunces, 'Fraunces', serif)",
+            }}
+          >
+            {isHi ? "मरीज़ों की कहानियाँ" : "Success Stories"}
+          </Link>
 
           {MOBILE_NAV.map((item) => (
             <button
