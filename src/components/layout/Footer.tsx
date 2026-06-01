@@ -20,12 +20,12 @@ export function Footer() {
       href: "/#how",
     },
     {
-      label: isHi ? "बीमा" : "Insurance",
-      href: "/#faq",
+      label: isHi ? "मरीज़ों की समीक्षाएँ" : "Patient reviews",
+      href: "/reviews",
     },
     {
-      label: isHi ? "मरीज़ों की कहानियाँ" : "Patient stories",
-      href: "/#testimonials",
+      label: isHi ? "मरीज़ों की कहानियाँ" : "Success stories",
+      href: "/success-stories",
     },
     {
       label: isHi ? "सामान्य प्रश्न" : "FAQ",
